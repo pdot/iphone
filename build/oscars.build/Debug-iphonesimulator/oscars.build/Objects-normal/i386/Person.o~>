@@ -1,0 +1,15 @@
+/Users/TelferMac/Projects/iphone/oscars/Classes/Person.m:1:18: error: Award.h: No such file or directory
+/Users/TelferMac/Projects/iphone/oscars/Classes/Person.m:2:30: error: ObjectiveResource.h: No such file or directory
+/Users/TelferMac/Projects/iphone/oscars/Classes/Person.m:5: warning: cannot find interface declaration for 'Award'
+/Users/TelferMac/Projects/iphone/oscars/Classes/Person.m:5: error: no declaration of property 'createdAt' found in the interface
+/Users/TelferMac/Projects/iphone/oscars/Classes/Person.m:5: error: no declaration of property 'updatedAt' found in the interface
+/Users/TelferMac/Projects/iphone/oscars/Classes/Person.m:5: error: no declaration of property 'name' found in the interface
+/Users/TelferMac/Projects/iphone/oscars/Classes/Person.m:5: error: no declaration of property 'AwardId' found in the interface
+/Users/TelferMac/Projects/iphone/oscars/Classes/Person.m: In function '-[Award dealloc]':
+/Users/TelferMac/Projects/iphone/oscars/Classes/Person.m:26: error: 'createdAt' undeclared (first use in this function)
+/Users/TelferMac/Projects/iphone/oscars/Classes/Person.m:26: error: (Each undeclared identifier is reported only once
+/Users/TelferMac/Projects/iphone/oscars/Classes/Person.m:26: error: for each function it appears in.)
+/Users/TelferMac/Projects/iphone/oscars/Classes/Person.m:27: error: 'updatedAt' undeclared (first use in this function)
+/Users/TelferMac/Projects/iphone/oscars/Classes/Person.m:28: error: 'name' undeclared (first use in this function)
+/Users/TelferMac/Projects/iphone/oscars/Classes/Person.m:29: error: 'AwardId' undeclared (first use in this function)
+/Users/TelferMac/Projects/iphone/oscars/Classes/Person.m:30: error: no super class declared in @interface for 'Award'

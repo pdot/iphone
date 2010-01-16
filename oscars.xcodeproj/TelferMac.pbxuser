@@ -1,0 +1,123 @@
+// !$*UTF8*$!
+{
+	1D3623240D0F684500981E51 /* oscarsAppDelegate.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {519, 266}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 324}";
+		};
+	};
+	1D6058900D05DD3D006BFB54 /* oscars */ = {
+		activeExec = 0;
+		executables = (
+			5E99FAD711001569007E11E8 /* oscars */,
+		);
+	};
+	29B97313FDCFA39411CA2CEA /* Project object */ = {
+		activeBuildConfigurationName = Debug;
+		activeExecutable = 5E99FAD711001569007E11E8 /* oscars */;
+		activeSDKPreference = iphonesimulator3.1.2;
+		activeTarget = 1D6058900D05DD3D006BFB54 /* oscars */;
+		addToTargets = (
+			1D6058900D05DD3D006BFB54 /* oscars */,
+		);
+		codeSenseManager = 5E99FAEE1100157E007E11E8 /* Code sense */;
+		executables = (
+			5E99FAD711001569007E11E8 /* oscars */,
+		);
+		perUserDictionary = {
+			PBXConfiguration.PBXFileTableDataSource3.PBXFileTableDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					341,
+					20,
+					48.16259765625,
+					43,
+					43,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+					PBXFileDataSource_Target_ColumnID,
+				);
+			};
+			PBXPerProjectTemplateStateSaveDate = 285218153;
+			PBXWorkspaceStateSaveDate = 285218153;
+		};
+		sourceControlManager = 5E99FAED1100157E007E11E8 /* Source Control */;
+		userBuildSettings = {
+		};
+	};
+	5E99FAD711001569007E11E8 /* oscars */ = {
+		isa = PBXExecutable;
+		activeArgIndices = (
+		);
+		argumentStrings = (
+		);
+		autoAttachOnCrash = 1;
+		breakpointsEnabled = 0;
+		configStateDict = {
+		};
+		customDataFormattersEnabled = 1;
+		debuggerPlugin = GDBDebugging;
+		disassemblyDisplayState = 0;
+		dylibVariantSuffix = "";
+		enableDebugStr = 1;
+		environmentEntries = (
+		);
+		executableSystemSymbolLevel = 0;
+		executableUserSymbolLevel = 0;
+		libgmallocEnabled = 0;
+		name = oscars;
+		sourceDirectories = (
+		);
+	};
+	5E99FAED1100157E007E11E8 /* Source Control */ = {
+		isa = PBXSourceControlManager;
+		fallbackIsa = XCSourceControlManager;
+		isSCMEnabled = 0;
+		scmConfiguration = {
+		};
+	};
+	5E99FAEE1100157E007E11E8 /* Code sense */ = {
+		isa = PBXCodeSenseManager;
+		indexTemplatePath = "";
+	};
+	5E99FBAA11018937007E11E8 /* AwardsViewController.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {856, 492}}";
+			sepNavSelRange = "{229, 0}";
+			sepNavVisRange = "{0, 408}";
+		};
+	};
+	5E99FBAB11018937007E11E8 /* AwardsViewController.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {856, 1400}}";
+			sepNavSelRange = "{50, 0}";
+			sepNavVisRange = "{0, 808}";
+		};
+	};
+	5E99FBAD110189B0007E11E8 /* Award.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {856, 492}}";
+			sepNavSelRange = "{100, 0}";
+			sepNavVisRange = "{0, 519}";
+			sepNavWindowFrame = "{{15, 66}, {1462, 957}}";
+		};
+	};
+	5E99FBAE110189B0007E11E8 /* Award.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {856, 492}}";
+			sepNavSelRange = "{104, 0}";
+			sepNavVisRange = "{0, 758}";
+			sepNavWindowFrame = "{{15, 66}, {1462, 957}}";
+		};
+	};
+}

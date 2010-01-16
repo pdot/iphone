@@ -1,0 +1,6 @@
+/Users/TelferMac/Projects/iphone/oscars/Classes/Award.m: In function '-[Award dealloc]':
+/Users/TelferMac/Projects/iphone/oscars/Classes/Award.m:30: error: 'description' undeclared (first use in this function)
+/Users/TelferMac/Projects/iphone/oscars/Classes/Award.m:30: error: (Each undeclared identifier is reported only once
+/Users/TelferMac/Projects/iphone/oscars/Classes/Award.m:30: error: for each function it appears in.)
+/Users/TelferMac/Projects/iphone/oscars/Classes/Award.m: At top level:
+/Users/TelferMac/Projects/iphone/oscars/Classes/Award.m:5: error: synthesized property 'description' must either be named the same as a compatible ivar or must explicitly name an ivar
