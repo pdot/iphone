@@ -112,6 +112,7 @@ static ORSResponseFormat _format;
 	if([res isError] && aError) {
 		*aError = res.error;
 	}
+	NSLog(@"<= %@", [[[NSString alloc] initWithData:res.body encoding:NSUTF8StringEncoding] autorelease]);
 	return [self performSelector:[self getRemoteParseDataMethod] withObject:res.body];
 }
 

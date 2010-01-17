@@ -12,23 +12,25 @@
 
 @implementation oscarsAppDelegate
 
-@synthesize window;
-
+@synthesize window, navigationController;
 
 - (void)applicationDidFinishLaunching:(UIApplication *)application {    
 	
 	//Configure ObjectiveResource
 	[ObjectiveResourceConfig setSite:@"http://localhost:2999/"];
 	
+	// dogs is password protected
+	[ObjectiveResourceConfig setUser:@"jason"];
+	[ObjectiveResourceConfig setPassword:@"jasonw"];
+	
 	// use json
-	//[ObjectiveResourceConfig setResponseType:JSONResponse];
+	// [ObjectiveResourceConfig setResponseType:JSONResponse];
 	
 	// use xml
 	[ObjectiveResourceConfig setResponseType:XmlResponse];
 	
     // Override point for customization after application launch
-	rootViewController = [[AwardsViewController alloc] init];
-	[window addSubview:rootViewController.view];
+	[window addSubview:navigationController.view];
     [window makeKeyAndVisible];
 }
 

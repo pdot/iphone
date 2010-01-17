@@ -1,8 +1,9 @@
 #import "Award.h"
 #import "ObjectiveResource.h"
+#import "Nominee.h"
 
 @implementation Award 
-@synthesize createdAt, updatedAt, name, description, AwardId;
+@synthesize createdAt, updatedAt, name, description, awardId;
 
 
 // handle pluralization 
@@ -11,22 +12,22 @@
 }
 
 
-// this will go to the url http://RAILS_URL/people/<id>/dogs
-// and return the array of dogs
-//-(NSArray *) findAllDogs {
-//	return [Dog findRemote:[NSString stringWithFormat:@"%@/%@",AwardId,@"dogs",nil]];
-//}
-//
-//-(NSArray *) findAllDogsWithResponse:(NSError **)aError {
-//	return [Dog findRemote:[NSString stringWithFormat:@"%@/%@",AwardId,@"dogs",nil] withResponse:aError];
-//}
+// this will go to the url http://RAILS_URL/awards/<id>/nominees
+// and return the array of nominees
+-(NSArray *) findAllNominees {
+	return [Nominee findRemote:[NSString stringWithFormat:@"%@/%@",awardId,@"nominees",nil]];
+}
+
+-(NSArray *) findAllNomineesWithResponse:(NSError **)aError {
+	return [Nominee findRemote:[NSString stringWithFormat:@"%@/%@",awardId,@"nominees",nil] withResponse:aError];
+}
 
 - (void) dealloc
 {
 	[createdAt release];
 	[updatedAt release];
 	[name release];
-	[AwardId release];
+	[awardId release];
 	[description release];
 	[super dealloc];
 }

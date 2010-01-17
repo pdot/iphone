@@ -10,11 +10,12 @@
 #import "AwardsViewController.h"
 
 @interface oscarsAppDelegate : NSObject <UIApplicationDelegate> {
-    UIWindow *window;
-	AwardsViewController *rootViewController;
+    IBOutlet UIWindow *window;
+	IBOutlet UINavigationController *navigationController;
 }
 
-@property (nonatomic, retain) IBOutlet UIWindow *window;
+@property (nonatomic, retain) UIWindow *window;
+@property (nonatomic, retain) UINavigationController *navigationController;
 
 @end
 

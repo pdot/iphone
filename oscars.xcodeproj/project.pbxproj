@@ -45,6 +45,9 @@
 		5E99FBA1110184FB007E11E8 /* Response.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E99FB83110184FB007E11E8 /* Response.m */; };
 		5E99FBAC11018937007E11E8 /* AwardsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E99FBAB11018937007E11E8 /* AwardsViewController.m */; };
 		5E99FBAF110189B0007E11E8 /* Award.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E99FBAE110189B0007E11E8 /* Award.m */; };
+		5E99FBE31102C2B8007E11E8 /* NomineesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E99FBDE1102C2B8007E11E8 /* NomineesViewController.m */; };
+		5E99FBE51102C2B8007E11E8 /* Nominee.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E99FBE11102C2B8007E11E8 /* Nominee.m */; };
+		5E99FCB91102D581007E11E8 /* NomineesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E99FCB81102D581007E11E8 /* NomineesViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -130,6 +133,11 @@
 		5E99FBAB11018937007E11E8 /* AwardsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AwardsViewController.m; sourceTree = "<group>"; };
 		5E99FBAD110189B0007E11E8 /* Award.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Award.h; sourceTree = "<group>"; };
 		5E99FBAE110189B0007E11E8 /* Award.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Award.m; sourceTree = "<group>"; };
+		5E99FBDE1102C2B8007E11E8 /* NomineesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NomineesViewController.m; sourceTree = "<group>"; };
+		5E99FBE01102C2B8007E11E8 /* NomineesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NomineesViewController.h; sourceTree = "<group>"; };
+		5E99FBE11102C2B8007E11E8 /* Nominee.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Nominee.m; sourceTree = "<group>"; };
+		5E99FBE21102C2B8007E11E8 /* Nominee.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Nominee.h; sourceTree = "<group>"; };
+		5E99FCB81102D581007E11E8 /* NomineesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NomineesViewController.xib; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* oscars-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "oscars-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -150,10 +158,8 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				5E99FBAA11018937007E11E8 /* AwardsViewController.h */,
-				5E99FBAD110189B0007E11E8 /* Award.h */,
-				5E99FBAE110189B0007E11E8 /* Award.m */,
-				5E99FBAB11018937007E11E8 /* AwardsViewController.m */,
+				5E99FBE71102C331007E11E8 /* Models */,
+				5E99FBE61102C322007E11E8 /* Controllers */,
 				1D3623240D0F684500981E51 /* oscarsAppDelegate.h */,
 				1D3623250D0F684500981E51 /* oscarsAppDelegate.m */,
 			);
@@ -192,6 +198,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				5E99FCB81102D581007E11E8 /* NomineesViewController.xib */,
 				28AD733E0D9D9553002E5188 /* MainWindow.xib */,
 				8D1107310486CEB800E47090 /* oscars-Info.plist */,
 			);
@@ -341,6 +348,28 @@
 			path = XML;
 			sourceTree = "<group>";
 		};
+		5E99FBE61102C322007E11E8 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				5E99FBAA11018937007E11E8 /* AwardsViewController.h */,
+				5E99FBAB11018937007E11E8 /* AwardsViewController.m */,
+				5E99FBE01102C2B8007E11E8 /* NomineesViewController.h */,
+				5E99FBDE1102C2B8007E11E8 /* NomineesViewController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		5E99FBE71102C331007E11E8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5E99FBAD110189B0007E11E8 /* Award.h */,
+				5E99FBE11102C2B8007E11E8 /* Nominee.m */,
+				5E99FBE21102C2B8007E11E8 /* Nominee.h */,
+				5E99FBAE110189B0007E11E8 /* Award.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -384,6 +413,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */,
+				5E99FCB91102D581007E11E8 /* NomineesViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -428,6 +458,8 @@
 				5E99FBA1110184FB007E11E8 /* Response.m in Sources */,
 				5E99FBAC11018937007E11E8 /* AwardsViewController.m in Sources */,
 				5E99FBAF110189B0007E11E8 /* Award.m in Sources */,
+				5E99FBE31102C2B8007E11E8 /* NomineesViewController.m in Sources */,
+				5E99FBE51102C2B8007E11E8 /* Nominee.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

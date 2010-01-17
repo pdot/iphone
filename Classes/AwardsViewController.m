@@ -1,5 +1,6 @@
 #import "AwardsViewController.h"
 #import "Award.h"
+#import "NomineesViewController.h"
 
 @interface AwardsViewController (Private)
 
@@ -9,14 +10,14 @@
 
 
 @implementation AwardsViewController
-@synthesize Awards , tableView;
+@synthesize awards , tableView;
 
 - (void)viewWillAppear:(BOOL)animated {
 	[self loadAwards];
 }
 
 - (void) loadAwards {
-	self.Awards = [Award findAllRemote];
+	self.awards = [Award findAllRemote];
 	[tableView reloadData];
 }
 
@@ -38,7 +39,7 @@
 
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [Awards count];
+    return [awards count];
 }
 
 
@@ -49,36 +50,37 @@
     UITableViewCell *cell = [aTableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
         cell = [[[UITableViewCell alloc] initWithFrame:CGRectZero reuseIdentifier:CellIdentifier] autorelease];
+		cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     }
-    cell.text = ((Award *)[Awards objectAtIndex:indexPath.row]).name;
+    cell.text = ((Award *)[awards objectAtIndex:indexPath.row]).name;
     return cell;
 }
 
 
-//- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-//	ViewAwardController *aController = [[[ViewAwardController alloc] initWithStyle:UITableViewStyleGrouped] autorelease];
-//	aController.Award = (Award *)[Awards objectAtIndex:indexPath.row];
-//	[self.navigationController pushViewController:aController animated:YES];
-//}
-
-- (void)tableView:(UITableView *)aTableView  commitEditingStyle:(UITableViewCellEditingStyle)editingStyle 
-forRowAtIndexPath:(NSIndexPath *)indexPath { 
-  [aTableView beginUpdates]; 
-  if (editingStyle == UITableViewCellEditingStyleDelete) { 
-		
-    [aTableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:YES]; 
-		
-    // Deletes the object on the resource
-    [(Award *)[Awards objectAtIndex:indexPath.row] destroyRemote];
-    [Awards removeObjectAtIndex:indexPath.row];
-  } 
-  [aTableView endUpdates];   
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+	NomineesViewController *nvc = [[[NomineesViewController alloc] initWithNibName:@"NomineesViewController" bundle:nil] autorelease];
+	nvc.category = (Award *)[awards objectAtIndex:indexPath.row];
+	[self.navigationController pushViewController:nvc animated:YES];		
 }
+
+//- (void)tableView:(UITableView *)aTableView  commitEditingStyle:(UITableViewCellEditingStyle)editingStyle 
+//forRowAtIndexPath:(NSIndexPath *)indexPath { 
+//  [aTableView beginUpdates]; 
+//  if (editingStyle == UITableViewCellEditingStyleDelete) { 
+//		
+//    [aTableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:YES]; 
+//		
+//    // Deletes the object on the resource
+//    [(Award *)[Awards objectAtIndex:indexPath.row] destroyRemote];
+//    [Awards removeObjectAtIndex:indexPath.row];
+//  } 
+//  [aTableView endUpdates];   
+//}
 
 
 - (void)dealloc {
-	[Awards release];
-  [super dealloc];
+	[awards release];
+	[super dealloc];
 }
 
 
