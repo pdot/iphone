@@ -37,7 +37,8 @@ static ORSResponseFormat _format;
 }
 
 + (void)setRemoteUser:(NSString *)user {
-	_activeResourceUser = user;
+	[_activeResourceUser release];
+	_activeResourceUser = [[NSString stringWithString:user] retain];
 }
 
 + (NSString *)getRemotePassword {
@@ -45,7 +46,8 @@ static ORSResponseFormat _format;
 }
 
 + (void)setRemotePassword:(NSString *)password {
-	_activeResourcePassword = password;
+	[_activeResourcePassword release];
+	_activeResourcePassword = [[NSString stringWithString:password] retain];
 }
 
 + (void)setRemoteResponseType:(ORSResponseFormat) format {

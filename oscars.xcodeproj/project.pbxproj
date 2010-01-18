@@ -13,6 +13,9 @@
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765FC0DF74451002DB57D /* CoreGraphics.framework */; };
 		28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD733E0D9D9553002E5188 /* MainWindow.xib */; };
+		5E9900181103CB4A007E11E8 /* RegistrationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E9900161103CB4A007E11E8 /* RegistrationViewController.m */; };
+		5E9900191103CB4A007E11E8 /* RegistrationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E9900171103CB4A007E11E8 /* RegistrationViewController.xib */; };
+		5E9900361103E86C007E11E8 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E9900351103E86C007E11E8 /* User.m */; };
 		5E99FB84110184FB007E11E8 /* Connection.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E99FB39110184FA007E11E8 /* Connection.m */; };
 		5E99FB85110184FB007E11E8 /* ConnectionDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E99FB3B110184FA007E11E8 /* ConnectionDelegate.m */; };
 		5E99FB86110184FB007E11E8 /* NSHTTPURLResponse+Error.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E99FB3D110184FA007E11E8 /* NSHTTPURLResponse+Error.m */; };
@@ -48,6 +51,9 @@
 		5E99FBE31102C2B8007E11E8 /* NomineesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E99FBDE1102C2B8007E11E8 /* NomineesViewController.m */; };
 		5E99FBE51102C2B8007E11E8 /* Nominee.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E99FBE11102C2B8007E11E8 /* Nominee.m */; };
 		5E99FCB91102D581007E11E8 /* NomineesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E99FCB81102D581007E11E8 /* NomineesViewController.xib */; };
+		5E99FDD61102E7E0007E11E8 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E99FDD51102E7E0007E11E8 /* LoginViewController.xib */; };
+		5E99FDE51102E99F007E11E8 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E99FDE41102E99F007E11E8 /* LoginViewController.m */; };
+		5E99FE851102FA6C007E11E8 /* AwardsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E99FE841102FA6C007E11E8 /* AwardsViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +66,11 @@
 		28AD733E0D9D9553002E5188 /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* oscars_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = oscars_Prefix.pch; sourceTree = "<group>"; };
+		5E9900151103CB4A007E11E8 /* RegistrationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegistrationViewController.h; sourceTree = "<group>"; };
+		5E9900161103CB4A007E11E8 /* RegistrationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegistrationViewController.m; sourceTree = "<group>"; };
+		5E9900171103CB4A007E11E8 /* RegistrationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = RegistrationViewController.xib; path = Classes/RegistrationViewController.xib; sourceTree = "<group>"; };
+		5E9900341103E86C007E11E8 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		5E9900351103E86C007E11E8 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		5E99FB38110184FA007E11E8 /* Connection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Connection.h; sourceTree = "<group>"; };
 		5E99FB39110184FA007E11E8 /* Connection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Connection.m; sourceTree = "<group>"; };
 		5E99FB3A110184FA007E11E8 /* ConnectionDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConnectionDelegate.h; sourceTree = "<group>"; };
@@ -138,6 +149,10 @@
 		5E99FBE11102C2B8007E11E8 /* Nominee.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Nominee.m; sourceTree = "<group>"; };
 		5E99FBE21102C2B8007E11E8 /* Nominee.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Nominee.h; sourceTree = "<group>"; };
 		5E99FCB81102D581007E11E8 /* NomineesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NomineesViewController.xib; sourceTree = "<group>"; };
+		5E99FDD51102E7E0007E11E8 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = LoginViewController.xib; path = Classes/LoginViewController.xib; sourceTree = "<group>"; };
+		5E99FDE31102E99F007E11E8 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		5E99FDE41102E99F007E11E8 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		5E99FE841102FA6C007E11E8 /* AwardsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AwardsViewController.xib; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* oscars-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "oscars-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -198,9 +213,12 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				5E9900171103CB4A007E11E8 /* RegistrationViewController.xib */,
+				5E99FDD51102E7E0007E11E8 /* LoginViewController.xib */,
 				5E99FCB81102D581007E11E8 /* NomineesViewController.xib */,
 				28AD733E0D9D9553002E5188 /* MainWindow.xib */,
 				8D1107310486CEB800E47090 /* oscars-Info.plist */,
+				5E99FE841102FA6C007E11E8 /* AwardsViewController.xib */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -355,6 +373,10 @@
 				5E99FBAB11018937007E11E8 /* AwardsViewController.m */,
 				5E99FBE01102C2B8007E11E8 /* NomineesViewController.h */,
 				5E99FBDE1102C2B8007E11E8 /* NomineesViewController.m */,
+				5E99FDE31102E99F007E11E8 /* LoginViewController.h */,
+				5E99FDE41102E99F007E11E8 /* LoginViewController.m */,
+				5E9900151103CB4A007E11E8 /* RegistrationViewController.h */,
+				5E9900161103CB4A007E11E8 /* RegistrationViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -363,9 +385,11 @@
 			isa = PBXGroup;
 			children = (
 				5E99FBAD110189B0007E11E8 /* Award.h */,
-				5E99FBE11102C2B8007E11E8 /* Nominee.m */,
-				5E99FBE21102C2B8007E11E8 /* Nominee.h */,
 				5E99FBAE110189B0007E11E8 /* Award.m */,
+				5E9900341103E86C007E11E8 /* User.h */,
+				5E9900351103E86C007E11E8 /* User.m */,
+				5E99FBE21102C2B8007E11E8 /* Nominee.h */,
+				5E99FBE11102C2B8007E11E8 /* Nominee.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -414,6 +438,9 @@
 			files = (
 				28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */,
 				5E99FCB91102D581007E11E8 /* NomineesViewController.xib in Resources */,
+				5E99FDD61102E7E0007E11E8 /* LoginViewController.xib in Resources */,
+				5E99FE851102FA6C007E11E8 /* AwardsViewController.xib in Resources */,
+				5E9900191103CB4A007E11E8 /* RegistrationViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -460,6 +487,9 @@
 				5E99FBAF110189B0007E11E8 /* Award.m in Sources */,
 				5E99FBE31102C2B8007E11E8 /* NomineesViewController.m in Sources */,
 				5E99FBE51102C2B8007E11E8 /* Nominee.m in Sources */,
+				5E99FDE51102E99F007E11E8 /* LoginViewController.m in Sources */,
+				5E9900181103CB4A007E11E8 /* RegistrationViewController.m in Sources */,
+				5E9900361103E86C007E11E8 /* User.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

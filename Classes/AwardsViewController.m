@@ -21,9 +21,9 @@
 	[tableView reloadData];
 }
 
--(IBAction) refreshButtonWasPressed {
-	[self loadAwards];
-}
+//-(IBAction) refreshButtonWasPressed {
+//	[self loadAwards];
+//}
 
 //-(IBAction) addButtonWasPressed {
 //	AddAwardViewController *aController = [[[AddAwardViewController alloc ] initWithNibName:@"AddAwardView" bundle:nil ] autorelease];
@@ -56,7 +56,6 @@
     return cell;
 }
 
-
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 	NomineesViewController *nvc = [[[NomineesViewController alloc] initWithNibName:@"NomineesViewController" bundle:nil] autorelease];
 	nvc.category = (Award *)[awards objectAtIndex:indexPath.row];
@@ -80,6 +79,7 @@
 
 - (void)dealloc {
 	[awards release];
+	[tableView release];
 	[super dealloc];
 }
 
