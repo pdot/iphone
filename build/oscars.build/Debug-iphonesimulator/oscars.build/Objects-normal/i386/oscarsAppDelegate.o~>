@@ -1,5 +1,0 @@
-/Users/TelferMac/Projects/iphone/oscars/Classes/oscarsAppDelegate.m:15: error: no declaration of property 'navigationController' found in the interface
-/Users/TelferMac/Projects/iphone/oscars/Classes/oscarsAppDelegate.m: In function '-[oscarsAppDelegate applicationDidFinishLaunching:]':
-/Users/TelferMac/Projects/iphone/oscars/Classes/oscarsAppDelegate.m:33: error: 'navigationController' undeclared (first use in this function)
-/Users/TelferMac/Projects/iphone/oscars/Classes/oscarsAppDelegate.m:33: error: (Each undeclared identifier is reported only once
-/Users/TelferMac/Projects/iphone/oscars/Classes/oscarsAppDelegate.m:33: error: for each function it appears in.)
