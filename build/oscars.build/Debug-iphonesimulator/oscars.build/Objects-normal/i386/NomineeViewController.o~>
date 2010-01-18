@@ -1,0 +1,2 @@
+/Users/TelferMac/Projects/iphone/oscars/Classes/NomineeViewController.m:9:35: error: NomineesViewController.h: No such file or directory
+/Users/TelferMac/Projects/iphone/oscars/Classes/NomineeViewController.m:14: error: cannot find interface declaration for 'NomineeViewController'

@@ -1,0 +1,3 @@
+/Users/TelferMac/Projects/iphone/oscars/Classes/Award.m:6: error: no declaration of property 'awardId' found in the interface
+/Users/TelferMac/Projects/iphone/oscars/Classes/Award.m:35: warning: property 'leagueId' requires method '-leagueId' to be defined - use @synthesize, @dynamic or provide a method implementation
+/Users/TelferMac/Projects/iphone/oscars/Classes/Award.m:35: warning: property 'leagueId' requires the method 'setLeagueId:' to be defined - use @synthesize, @dynamic or provide a method implementation
