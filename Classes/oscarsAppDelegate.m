@@ -31,6 +31,8 @@
 	
     // Override point for customization after application launch
 	[window addSubview:navigationController.view];
+	[navigationController setNavigationBarHidden:YES animated:NO];
+	
     [window makeKeyAndVisible];
 }
 

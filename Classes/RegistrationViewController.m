@@ -70,8 +70,6 @@
 	[txtPasswordConfirmation resignFirstResponder];
 }
 
-
-
 - (void)dealloc {
     [super dealloc];
 }

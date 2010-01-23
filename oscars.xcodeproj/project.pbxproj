@@ -21,6 +21,8 @@
 		5E99012811043184007E11E8 /* League.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E99012711043184007E11E8 /* League.m */; };
 		5E9901CE1104FDBF007E11E8 /* AddLeagueViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E9901CC1104FDBF007E11E8 /* AddLeagueViewController.m */; };
 		5E9901CF1104FDBF007E11E8 /* AddLeagueViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E9901CD1104FDBF007E11E8 /* AddLeagueViewController.xib */; };
+		5E99022C110946FB007E11E8 /* stage_background.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E99022B110946FB007E11E8 /* stage_background.png */; };
+		5E99023711094C1A007E11E8 /* bg_login.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E99023611094C1A007E11E8 /* bg_login.png */; };
 		5E99FB84110184FB007E11E8 /* Connection.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E99FB39110184FA007E11E8 /* Connection.m */; };
 		5E99FB85110184FB007E11E8 /* ConnectionDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E99FB3B110184FA007E11E8 /* ConnectionDelegate.m */; };
 		5E99FB86110184FB007E11E8 /* NSHTTPURLResponse+Error.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E99FB3D110184FA007E11E8 /* NSHTTPURLResponse+Error.m */; };
@@ -84,6 +86,8 @@
 		5E9901CB1104FDBF007E11E8 /* AddLeagueViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddLeagueViewController.h; sourceTree = "<group>"; };
 		5E9901CC1104FDBF007E11E8 /* AddLeagueViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddLeagueViewController.m; sourceTree = "<group>"; };
 		5E9901CD1104FDBF007E11E8 /* AddLeagueViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = AddLeagueViewController.xib; path = Classes/AddLeagueViewController.xib; sourceTree = "<group>"; };
+		5E99022B110946FB007E11E8 /* stage_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stage_background.png; sourceTree = "<group>"; };
+		5E99023611094C1A007E11E8 /* bg_login.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg_login.png; sourceTree = "<group>"; };
 		5E99FB38110184FA007E11E8 /* Connection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Connection.h; sourceTree = "<group>"; };
 		5E99FB39110184FA007E11E8 /* Connection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Connection.m; sourceTree = "<group>"; };
 		5E99FB3A110184FA007E11E8 /* ConnectionDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConnectionDelegate.h; sourceTree = "<group>"; };
@@ -226,13 +230,8 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				5E99FE841102FA6C007E11E8 /* AwardsViewController.xib */,
-				5E9901CD1104FDBF007E11E8 /* AddLeagueViewController.xib */,
-				5E99011B1104303F007E11E8 /* LeaguesViewController.xib */,
-				5E9900171103CB4A007E11E8 /* RegistrationViewController.xib */,
-				5E99FDD51102E7E0007E11E8 /* LoginViewController.xib */,
-				5E99FCB81102D581007E11E8 /* NomineesViewController.xib */,
-				28AD733E0D9D9553002E5188 /* MainWindow.xib */,
+				5E99022D11094701007E11E8 /* Images */,
+				5E99022A110946C6007E11E8 /* NIBs */,
 				8D1107310486CEB800E47090 /* oscars-Info.plist */,
 			);
 			name = Resources;
@@ -247,6 +246,29 @@
 				288765FC0DF74451002DB57D /* CoreGraphics.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5E99022A110946C6007E11E8 /* NIBs */ = {
+			isa = PBXGroup;
+			children = (
+				5E99FE841102FA6C007E11E8 /* AwardsViewController.xib */,
+				5E9901CD1104FDBF007E11E8 /* AddLeagueViewController.xib */,
+				5E99011B1104303F007E11E8 /* LeaguesViewController.xib */,
+				5E9900171103CB4A007E11E8 /* RegistrationViewController.xib */,
+				5E99FDD51102E7E0007E11E8 /* LoginViewController.xib */,
+				5E99FCB81102D581007E11E8 /* NomineesViewController.xib */,
+				28AD733E0D9D9553002E5188 /* MainWindow.xib */,
+			);
+			name = NIBs;
+			sourceTree = "<group>";
+		};
+		5E99022D11094701007E11E8 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				5E99023611094C1A007E11E8 /* bg_login.png */,
+				5E99022B110946FB007E11E8 /* stage_background.png */,
+			);
+			name = Images;
 			sourceTree = "<group>";
 		};
 		5E99FB37110184FA007E11E8 /* objective_resource */ = {
@@ -464,6 +486,8 @@
 				5E9900191103CB4A007E11E8 /* RegistrationViewController.xib in Resources */,
 				5E99011D1104303F007E11E8 /* LeaguesViewController.xib in Resources */,
 				5E9901CF1104FDBF007E11E8 /* AddLeagueViewController.xib in Resources */,
+				5E99022C110946FB007E11E8 /* stage_background.png in Resources */,
+				5E99023711094C1A007E11E8 /* bg_login.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

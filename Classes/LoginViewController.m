@@ -15,7 +15,7 @@
 
 @implementation LoginViewController
 
-@synthesize btnLogin, btnRegister, txtLogin, txtPassword;
+@synthesize btnLogin, btnRegister, txtLogin, txtPassword, scrollView;
 
  // The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
@@ -29,6 +29,12 @@
  // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
 	[super viewDidLoad];
+	
+	// register keyboard notifications
+	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWasShown:) name:UIKeyboardDidShowNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWasHidden:) name:UIKeyboardDidHideNotification object:nil];	
+	
+	[scrollView setContentSize:CGSizeMake(320,460)]; 
 }
 
 - (IBAction) onLoginButtonPress: (id) sender { 
@@ -73,39 +79,99 @@
 	// Release any cached data, images, etc that aren't in use.
 }
 
-- (void)viewDidUnload {
-	// Release any retained subviews of the main view.
-	// e.g. self.myOutlet = nil;
+// Called when the UIKeyboardDidShowNotification is sent.
+- (void)keyboardWasShown:(NSNotification*)aNotification
+{
+    if (keyboardShown)
+        return;
+	
+    NSDictionary* info = [aNotification userInfo];
+	
+    // Get the size of the keyboard.
+    NSValue* aValue = [info objectForKey:UIKeyboardBoundsUserInfoKey];
+    CGSize keyboardSize = [aValue CGRectValue].size;
+	
+    // Resize the scroll view (which is the root view of the window)
+    CGRect viewFrame = [scrollView frame];
+    viewFrame.size.height -= keyboardSize.height;
+    scrollView.frame = viewFrame;
+	
+    // Scroll the active text field into view.
+    /*CGRect textFieldRect;
+	if (txtLogin.isFirstResponder)
+	{
+		textFieldRect = [txtLogin frame];
+	} 
+	else
+	{
+		textFieldRect = [txtPassword frame];
+	}
+    [scrollView scrollRectToVisible:textFieldRect animated:YES];
+	*/
+    keyboardShown = YES;
 }
 
-- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
-	if(buttonIndex == 1)
+// Called when the UIKeyboardDidHideNotification is sent
+- (void)keyboardWasHidden:(NSNotification*)aNotification
+{	
+    NSDictionary* info = [aNotification userInfo];
+
+    // Get the size of the keyboard.
+    NSValue* aValue = [info objectForKey:UIKeyboardBoundsUserInfoKey];
+    CGSize keyboardSize = [aValue CGRectValue].size;
+	
+    // Reset the height of the scroll view to its original value
+    CGRect viewFrame = [scrollView frame];
+    viewFrame.size.height += keyboardSize.height;
+    scrollView.frame = viewFrame;
+    keyboardShown = NO;	
+}
+
+- (IBAction) editingDidEndOnExit:(id)sender {
+	if (sender == txtPassword)
 	{
-		// registration button was clicked
-		[self onRegisterButtonPress:self];
+		[sender resignFirstResponder];
 	}
 }
 
-//- (void)displayMessage: (NSString*) msg {
-//	UIAlertView* dialog = [[[UIAlertView alloc] init] retain];
-//	[dialog setDelegate:self];
-//	[dialog setTitle:@""];
-//	
-//	[dialog setMessage:msg];
-//	[dialog addButtonWithTitle:@"OK"];
-//	[dialog addTextFieldWithValue:@"name" label:@""];
-//	CGAffineTransform moveUp = CGAffineTransformMakeTranslation(0.0, 100.0);
-//	[dialog setTransform: moveUp];
-//	[dialog show];
-//	[dialog release];	
-//}
+- (void)textFieldDidEndEditing:(UITextField *)textField {
+	if (textField == txtLogin) 
+	{
+		[txtPassword becomeFirstResponder];
+	}
+}
 
+- (BOOL)textFieldShouldEndEditing:(UITextField *)textField {
+	// login and password validation
+	if (textField.text.length < 1) {
+		return NO;
+	}
+	return YES;
+}
+
+- (BOOL)textFieldShouldBeginEditing:(UITextField *)textField {
+	if (textField == txtPassword) {
+		txtPassword.secureTextEntry = YES;
+	}
+	return YES;
+}
+
+- (void)viewDidUnload {
+	// Release any retained subviews of the main view.
+	// e.g. self.myOutlet = nil;
+	btnLogin = nil;
+	btnRegister = nil;
+	txtLogin = nil;
+	txtPassword = nil;
+	scrollView = nil;
+}
 
 - (void)dealloc {
 	[btnLogin release];
 	[btnRegister release];
 	[txtLogin release];
 	[txtPassword release];
+	[scrollView release];
     [super dealloc];
 }
 

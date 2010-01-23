@@ -4,13 +4,21 @@
 <dict>
 	<key>files</key>
 	<dict>
+		<key>AddLeagueViewController.nib</key>
+		<data>
+		CHrtbTyelU2SmVM5tYy4Dixvy9g=
+		</data>
 		<key>AwardsViewController.nib</key>
 		<data>
 		/eoZOi63V6nmezSLSaphyEJissQ=
 		</data>
+		<key>LeaguesViewController.nib</key>
+		<data>
+		1aY+qb/8g/E2z7bhSV7CaWJ56Ys=
+		</data>
 		<key>LoginViewController.nib</key>
 		<data>
-		EqIx6LNODXdHvECEcqiRi34pwjM=
+		amLmNMhSA0/tIU5Z6rkf4gTrF9Q=
 		</data>
 		<key>MainWindow.nib</key>
 		<data>
@@ -26,11 +34,19 @@
 		</data>
 		<key>RegistrationViewController.nib</key>
 		<data>
-		VswOZ6TZCNktAWL0OneRWJaKBj4=
+		rGgeMm8VWiyvdYlNRSzjaqgz75E=
+		</data>
+		<key>bg_login.png</key>
+		<data>
+		XknMxcmH7KftEvCJBg4VgkZ7SdE=
 		</data>
 		<key>embedded.mobileprovision</key>
 		<data>
 		JZtfGReEYlqwynKYbpWT9AzRamE=
+		</data>
+		<key>stage_background.png</key>
+		<data>
+		xe7re06LnDOE5GaRVMWqHEvfGLg=
 		</data>
 	</dict>
 	<key>rules</key>
