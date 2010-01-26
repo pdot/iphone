@@ -2,7 +2,7 @@
 #import "League.h"
 #import "AwardsViewController.h"
 #import "AddLeagueViewController.h"
-
+#import "PDTextField.h"
 @implementation LeaguesViewController
 
 @synthesize tableView, leagues;
@@ -16,7 +16,12 @@
     return self;
 }
 - (void) viewDidLoad {
-	self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addButtonWasPressed)]; 
+//	self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addButtonWasPressed)]; 
+	
+	// Setting the text
+	PDTextField* myTextField = [[PDTextField alloc] initWithFrame:CGRectMake(50, 50, 200, 40)];	
+	[myTextField setPlaceholder:@"Password"];
+	[[self view] addSubview:myTextField];
 }
 
 - (void) loadLeagues {

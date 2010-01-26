@@ -11,9 +11,15 @@
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     if (self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil]) {
         self.title = @"Signup";
+		
+		// add textfields
+	
+		
+		// add buttons
     }
     return self;
 }
+
 
 - (IBAction) onRegisterButtonPress: (id) sender {
 	// TODO: add more error handling / info messages

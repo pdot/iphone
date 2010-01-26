@@ -30,6 +30,11 @@
 - (void)viewDidLoad {
 	[super viewDidLoad];
 	
+	// TODO: remove this
+//	LeaguesViewController *vc = [[[LeaguesViewController alloc] initWithNibName:@"LeaguesViewController" bundle:nil] autorelease];
+//	RegistrationViewController *vc = [[[RegistrationViewController alloc] initWithNibName:@"RegistrationViewController" bundle:nil] autorelease];
+//	[self.navigationController pushViewController:vc animated:YES];
+	
 	// register keyboard notifications
 	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWasShown:) name:UIKeyboardDidShowNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWasHidden:) name:UIKeyboardDidHideNotification object:nil];	
@@ -96,18 +101,6 @@
     viewFrame.size.height -= keyboardSize.height;
     scrollView.frame = viewFrame;
 	
-    // Scroll the active text field into view.
-    /*CGRect textFieldRect;
-	if (txtLogin.isFirstResponder)
-	{
-		textFieldRect = [txtLogin frame];
-	} 
-	else
-	{
-		textFieldRect = [txtPassword frame];
-	}
-    [scrollView scrollRectToVisible:textFieldRect animated:YES];
-	*/
     keyboardShown = YES;
 }
 
@@ -145,13 +138,6 @@
 	// login and password validation
 	if (textField.text.length < 1) {
 		return NO;
-	}
-	return YES;
-}
-
-- (BOOL)textFieldShouldBeginEditing:(UITextField *)textField {
-	if (textField == txtPassword) {
-		txtPassword.secureTextEntry = YES;
 	}
 	return YES;
 }

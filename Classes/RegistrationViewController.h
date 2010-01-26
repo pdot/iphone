@@ -7,19 +7,19 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "PDTextField.h"
 
 @interface RegistrationViewController : UIViewController {
-	IBOutlet UITextField *txtLogin;
-	IBOutlet UITextField *txtEmail;
-	IBOutlet UITextField *txtPassword;
-	IBOutlet UITextField *txtPasswordConfirmation;
+	IBOutlet PDTextField *txtLogin;
+	IBOutlet PDTextField *txtEmail;
+	IBOutlet PDTextField *txtPassword;
+	IBOutlet PDTextField *txtPasswordConfirmation;
 }
 
-@property(nonatomic , retain) UITextField *txtLogin;
-@property(nonatomic , retain) UITextField *txtEmail;
-@property(nonatomic , retain) UITextField *txtPassword;
-@property(nonatomic , retain) UITextField *txtPasswordConfirmation;
+@property(nonatomic , retain) PDTextField *txtLogin;
+@property(nonatomic , retain) PDTextField *txtEmail;
+@property(nonatomic , retain) PDTextField *txtPassword;
+@property(nonatomic , retain) PDTextField *txtPasswordConfirmation;
 
 - (IBAction) onRegisterButtonPress: (id) sender;
 - (IBAction) onCancelButtonPress: (id) sender;
