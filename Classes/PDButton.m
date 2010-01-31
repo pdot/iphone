@@ -13,8 +13,11 @@
 
 - (void)awakeFromNib {
 	[super awakeFromNib];
-	[self setBackgroundImage:[UIImage imageNamed:@"bg_uitextfield.png"] forState:UIControlStateNormal];
+	UIImage *buttonBackground = [UIImage imageNamed:@"bg_uitextfield.png"];
+	buttonBackground = [buttonBackground stretchableImageWithLeftCapWidth:250 topCapHeight:20 ];
+	[self setBackgroundImage:buttonBackground forState:UIControlStateNormal];
 	[self setTitleColor:[UIColor colorWithRed:0.5 green:0.5 blue:0.5 alpha:1.0] forState:UIControlStateNormal];
 }
+
 
 @end

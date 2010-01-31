@@ -3,34 +3,70 @@
 #import "AwardsViewController.h"
 #import "AddLeagueViewController.h"
 #import "PDTextField.h"
+#import "LeagueDetailsViewController.h"
+
+
+
 @implementation LeaguesViewController
 
-@synthesize tableView, leagues;
-
- // The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
-    if (self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil]) {
-        // Custom initialization
-		self.title = @"Leagues";
-    }
-    return self;
-}
-- (void) viewDidLoad {
-//	self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addButtonWasPressed)]; 
-	
-	// Setting the text
-	PDTextField* myTextField = [[PDTextField alloc] initWithFrame:CGRectMake(50, 50, 200, 40)];	
-	[myTextField setPlaceholder:@"Password"];
-	[[self view] addSubview:myTextField];
-}
-
-- (void) loadLeagues {
-	self.leagues = [League findAllRemote];
-	[tableView reloadData];
-}
+@synthesize leagues, btnAdd, btnPool1, btnPool2, btnPool3, btnPool4;
 
 - (void)viewWillAppear:(BOOL)animated {
 	[self loadLeagues];
+	// TODO: figure out why leagues sometimes are not showing up on iphone
+}
+
+- (void) loadLeagues {
+	btnPool1.hidden = YES;
+	btnPool2.hidden = YES;
+	btnPool3.hidden = YES;
+	btnPool4.hidden = YES;
+	
+	self.leagues = [League findAllRemote];
+	
+	// dynamically create enough buttons
+	if (self.leagues.count >= 1) {
+		[btnPool1 setTitle:((League *)[leagues objectAtIndex:0]).name forState:UIControlStateNormal];
+		btnPool1.contentEdgeInsets = UIEdgeInsetsMake(0.0, 10.0, 0.0, 0.0);
+		btnPool1.hidden = NO;
+	}
+	if (self.leagues.count >= 2) {
+		[btnPool2 setTitle:((League *)[leagues objectAtIndex:1]).name forState:UIControlStateNormal];
+		btnPool2.contentEdgeInsets = UIEdgeInsetsMake(0.0, 10.0, 0.0, 0.0);
+		btnPool2.hidden = NO;
+	}
+	if (self.leagues.count >= 3) {
+		[btnPool3 setTitle:((League *)[leagues objectAtIndex:2]).name forState:UIControlStateNormal];
+		btnPool3.contentEdgeInsets = UIEdgeInsetsMake(0.0, 10.0, 0.0, 0.0);
+		btnPool3.hidden = NO;
+	}
+	if (self.leagues.count == 4) {
+		[btnPool4 setTitle:((League *)[leagues objectAtIndex:3]).name forState:UIControlStateNormal];
+		btnPool4.contentEdgeInsets = UIEdgeInsetsMake(0.0, 10.0, 0.0, 0.0);
+		btnPool4.hidden = NO;
+		
+	}
+	
+	// TODO: position add button
+}
+
+
+-(IBAction) poolButtonWasPressed:(UIButton*) sender {
+	League *selectedLeague = nil;
+	if (sender == btnPool1) {
+		selectedLeague = (League*)[leagues objectAtIndex:0]; 
+	} else if (sender == btnPool2) {
+		selectedLeague = (League*)[leagues objectAtIndex:1]; 	
+	} else if (sender == btnPool3) {
+		selectedLeague = (League*)[leagues objectAtIndex:2]; 
+	} else if (sender == btnPool4) {
+		selectedLeague = (League*)[leagues objectAtIndex:3]; 
+	}
+	
+	if (selectedLeague != nil) {
+		LeagueDetailsViewController *vc = [[[LeagueDetailsViewController alloc ] initWithLeague:selectedLeague] autorelease];
+		[self.navigationController pushViewController:vc animated:YES];	
+	}
 }
 
 -(IBAction) addButtonWasPressed {
@@ -38,38 +74,17 @@
 	[self.navigationController pushViewController:vc animated:YES];
 }
 
-
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 1;
-}
-
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [leagues count];
-}
-
-
-- (UITableViewCell *)tableView:(UITableView *)aTableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    
-    static NSString *CellIdentifier = @"Cell";
-    
-    UITableViewCell *cell = [aTableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    if (cell == nil) {
-        cell = [[[UITableViewCell alloc] initWithFrame:CGRectZero reuseIdentifier:CellIdentifier] autorelease];
-		cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-    }
-    cell.text = ((League *)[leagues objectAtIndex:indexPath.row]).name;
-    return cell;
-}
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-	AwardsViewController *avc = [[[AwardsViewController alloc] initWithNibName:@"AwardsViewController" bundle:nil] autorelease];
-	[self.navigationController pushViewController:avc animated:YES];		
+- (void)viewDidUnload {
+	leagues = nil;
+	btnAdd = nil;
+	btnPool1 = nil;
+	btnPool2 = nil;
+	btnPool3 = nil;
+	btnPool4 = nil;
 }
 
 - (void)dealloc {
 	[leagues release];
-	[tableView release];
     [super dealloc];
 }
 

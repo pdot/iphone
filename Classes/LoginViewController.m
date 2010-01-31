@@ -31,9 +31,9 @@
 	[super viewDidLoad];
 	
 	// TODO: remove this
-//	LeaguesViewController *vc = [[[LeaguesViewController alloc] initWithNibName:@"LeaguesViewController" bundle:nil] autorelease];
+	LeaguesViewController *vc = [[[LeaguesViewController alloc] initWithNibName:@"LeaguesViewController" bundle:nil] autorelease];
 //	RegistrationViewController *vc = [[[RegistrationViewController alloc] initWithNibName:@"RegistrationViewController" bundle:nil] autorelease];
-//	[self.navigationController pushViewController:vc animated:YES];
+	[self.navigationController pushViewController:vc animated:YES];
 	
 	// register keyboard notifications
 	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWasShown:) name:UIKeyboardDidShowNotification object:nil];

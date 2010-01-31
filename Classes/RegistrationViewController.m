@@ -5,12 +5,13 @@
 
 @implementation RegistrationViewController
 
-@synthesize txtLogin, txtEmail, txtPassword, txtPasswordConfirmation;
+@synthesize scrollView, txtFirstName, txtLastName, txtLogin, txtEmail, txtPassword, txtPasswordConfirmation;
 
 // The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     if (self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil]) {
         self.title = @"Signup";
+		keyboardShown = NO;
 		
 		// add textfields
 	
@@ -20,9 +21,15 @@
     return self;
 }
 
-
+- (void) viewDidLoad {
+	// register keyboard notifications
+	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWasShown:) name:UIKeyboardDidShowNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWasHidden:) name:UIKeyboardDidHideNotification object:nil];	
+	
+	[scrollView setContentSize:CGSizeMake(320,460)]; 
+}
 - (IBAction) onRegisterButtonPress: (id) sender {
-	// TODO: add more error handling / info messages
+	// TODO: add first name and last name here / perform validation / add max and min characters
 	NSString *login = txtLogin.text;
 	NSString *email = txtEmail.text;
 	NSString *password = txtPassword.text;
@@ -64,16 +71,114 @@
 	// Release any cached data, images, etc that aren't in use.
 }
 
-- (void)viewDidUnload {
-	// Release any retained subviews of the main view.
-	// e.g. self.myOutlet = nil;
+
+// Called when the UIKeyboardDidShowNotification is sent.
+- (void)keyboardWasShown:(NSNotification*)aNotification
+{
+    if (keyboardShown)
+        return;
+	
+    NSDictionary* info = [aNotification userInfo];
+	
+    // Get the size of the keyboard.
+    NSValue* aValue = [info objectForKey:UIKeyboardBoundsUserInfoKey];
+    CGSize keyboardSize = [aValue CGRectValue].size;
+	
+    // Resize the scroll view (which is the root view of the window)
+    CGRect viewFrame = [scrollView frame];
+    viewFrame.size.height -= keyboardSize.height;
+    scrollView.frame = viewFrame;
+	
+    keyboardShown = YES;
 }
 
-- (IBAction)hideKeyboard:(id)sender {
-	[txtLogin resignFirstResponder];
-	[txtEmail resignFirstResponder];
-	[txtPassword resignFirstResponder];
-	[txtPasswordConfirmation resignFirstResponder];
+// Called when the UIKeyboardDidHideNotification is sent
+- (void)keyboardWasHidden:(NSNotification*)aNotification
+{	
+    NSDictionary* info = [aNotification userInfo];
+	
+    // Get the size of the keyboard.
+    NSValue* aValue = [info objectForKey:UIKeyboardBoundsUserInfoKey];
+    CGSize keyboardSize = [aValue CGRectValue].size;
+	
+    // Reset the height of the scroll view to its original value
+    CGRect viewFrame = [scrollView frame];
+    viewFrame.size.height += keyboardSize.height;
+    scrollView.frame = viewFrame;
+    keyboardShown = NO;	
+}
+
+- (IBAction) editingDidEndOnExit:(id)sender {
+	if (sender == txtFirstName) 
+	{
+		[txtLastName becomeFirstResponder];
+	} 
+	else if (sender == txtLastName) 
+	{
+		[txtLogin becomeFirstResponder];
+	} 
+	else if (sender == txtLogin) 
+	{
+		[txtEmail becomeFirstResponder];
+	}
+	else if (sender == txtEmail) 
+	{
+		[txtPassword becomeFirstResponder];
+	}
+	else if (sender == txtPassword) 
+	{
+		[txtPasswordConfirmation becomeFirstResponder];
+	}
+	else if (sender == txtPasswordConfirmation)
+	{
+		[sender resignFirstResponder];
+	}
+}
+
+- (void)textFieldDidEndEditing:(UITextField *)textField {
+	if (textField == txtFirstName) 
+	{
+		[txtLastName becomeFirstResponder];
+	} 
+	else if (textField == txtLastName) 
+	{
+		[txtLogin becomeFirstResponder];
+	} 
+	else if (textField == txtLogin) 
+	{
+		[txtEmail becomeFirstResponder];
+	}
+	else if (textField == txtEmail) 
+	{
+		[txtPassword becomeFirstResponder];
+	}
+	else if (textField == txtPassword) 
+	{
+		[txtPasswordConfirmation becomeFirstResponder];
+	}
+	else if (textField == txtPasswordConfirmation)
+	{
+		[textField resignFirstResponder];
+	}
+}
+
+- (BOOL)textFieldShouldEndEditing:(UITextField *)textField {
+	// login and password validation
+	if (textField.text.length < 1) {
+		return NO;
+	}
+	return YES;
+}
+
+
+- (void)viewDidUnload {
+	scrollView = nil;
+	txtFirstName = nil;
+	txtLastName = nil;
+	txtLogin = nil;
+	txtEmail = nil;
+	txtPassword = nil;
+	txtPasswordConfirmation = nil;
 }
 
 - (void)dealloc {

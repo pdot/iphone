@@ -13,6 +13,13 @@
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765FC0DF74451002DB57D /* CoreGraphics.framework */; };
 		28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD733E0D9D9553002E5188 /* MainWindow.xib */; };
+		5E4C722C1112A7DA00D2B0E1 /* CreateLeagueViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E4C722A1112A7DA00D2B0E1 /* CreateLeagueViewController.m */; };
+		5E4C722D1112A7DA00D2B0E1 /* CreateLeagueViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E4C722B1112A7DA00D2B0E1 /* CreateLeagueViewController.xib */; };
+		5E4C72311112A80000D2B0E1 /* JoinLeagueViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E4C722F1112A80000D2B0E1 /* JoinLeagueViewController.m */; };
+		5E4C72321112A80000D2B0E1 /* JoinLeagueViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E4C72301112A80000D2B0E1 /* JoinLeagueViewController.xib */; };
+		5E4C72A11112BD2200D2B0E1 /* LeagueDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E4C729F1112BD2200D2B0E1 /* LeagueDetailsViewController.m */; };
+		5E4C72A21112BD2200D2B0E1 /* LeagueDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E4C72A01112BD2200D2B0E1 /* LeagueDetailsViewController.xib */; };
+		5E4C735A111438BF00D2B0E1 /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E4C7359111438BF00D2B0E1 /* Utils.m */; };
 		5E9900181103CB4A007E11E8 /* RegistrationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E9900161103CB4A007E11E8 /* RegistrationViewController.m */; };
 		5E9900191103CB4A007E11E8 /* RegistrationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E9900171103CB4A007E11E8 /* RegistrationViewController.xib */; };
 		5E9900361103E86C007E11E8 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E9900351103E86C007E11E8 /* User.m */; };
@@ -76,6 +83,17 @@
 		28AD733E0D9D9553002E5188 /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* oscars_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = oscars_Prefix.pch; sourceTree = "<group>"; };
+		5E4C72291112A7DA00D2B0E1 /* CreateLeagueViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateLeagueViewController.h; sourceTree = "<group>"; };
+		5E4C722A1112A7DA00D2B0E1 /* CreateLeagueViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateLeagueViewController.m; sourceTree = "<group>"; };
+		5E4C722B1112A7DA00D2B0E1 /* CreateLeagueViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = CreateLeagueViewController.xib; path = Classes/CreateLeagueViewController.xib; sourceTree = "<group>"; };
+		5E4C722E1112A80000D2B0E1 /* JoinLeagueViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JoinLeagueViewController.h; sourceTree = "<group>"; };
+		5E4C722F1112A80000D2B0E1 /* JoinLeagueViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JoinLeagueViewController.m; sourceTree = "<group>"; };
+		5E4C72301112A80000D2B0E1 /* JoinLeagueViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = JoinLeagueViewController.xib; path = Classes/JoinLeagueViewController.xib; sourceTree = "<group>"; };
+		5E4C729E1112BD2200D2B0E1 /* LeagueDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeagueDetailsViewController.h; sourceTree = "<group>"; };
+		5E4C729F1112BD2200D2B0E1 /* LeagueDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeagueDetailsViewController.m; sourceTree = "<group>"; };
+		5E4C72A01112BD2200D2B0E1 /* LeagueDetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = LeagueDetailsViewController.xib; path = Classes/LeagueDetailsViewController.xib; sourceTree = "<group>"; };
+		5E4C7358111438BF00D2B0E1 /* Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
+		5E4C7359111438BF00D2B0E1 /* Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utils.m; sourceTree = "<group>"; };
 		5E9900151103CB4A007E11E8 /* RegistrationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegistrationViewController.h; sourceTree = "<group>"; };
 		5E9900161103CB4A007E11E8 /* RegistrationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegistrationViewController.m; sourceTree = "<group>"; };
 		5E9900171103CB4A007E11E8 /* RegistrationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = RegistrationViewController.xib; path = Classes/RegistrationViewController.xib; sourceTree = "<group>"; };
@@ -203,6 +221,8 @@
 				5E99FBE61102C322007E11E8 /* Controllers */,
 				1D3623240D0F684500981E51 /* oscarsAppDelegate.h */,
 				1D3623250D0F684500981E51 /* oscarsAppDelegate.m */,
+				5E4C7358111438BF00D2B0E1 /* Utils.h */,
+				5E4C7359111438BF00D2B0E1 /* Utils.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -260,6 +280,9 @@
 		5E99022A110946C6007E11E8 /* NIBs */ = {
 			isa = PBXGroup;
 			children = (
+				5E4C72A01112BD2200D2B0E1 /* LeagueDetailsViewController.xib */,
+				5E4C72301112A80000D2B0E1 /* JoinLeagueViewController.xib */,
+				5E4C722B1112A7DA00D2B0E1 /* CreateLeagueViewController.xib */,
 				5E99FE841102FA6C007E11E8 /* AwardsViewController.xib */,
 				5E9901CD1104FDBF007E11E8 /* AddLeagueViewController.xib */,
 				5E99011B1104303F007E11E8 /* LeaguesViewController.xib */,
@@ -427,6 +450,8 @@
 		5E99FBE61102C322007E11E8 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				5E4C72291112A7DA00D2B0E1 /* CreateLeagueViewController.h */,
+				5E4C722A1112A7DA00D2B0E1 /* CreateLeagueViewController.m */,
 				5E99FBAA11018937007E11E8 /* AwardsViewController.h */,
 				5E99FBAB11018937007E11E8 /* AwardsViewController.m */,
 				5E99FBE01102C2B8007E11E8 /* NomineesViewController.h */,
@@ -439,6 +464,10 @@
 				5E99011A1104303F007E11E8 /* LeaguesViewController.m */,
 				5E9901CB1104FDBF007E11E8 /* AddLeagueViewController.h */,
 				5E9901CC1104FDBF007E11E8 /* AddLeagueViewController.m */,
+				5E4C722E1112A80000D2B0E1 /* JoinLeagueViewController.h */,
+				5E4C722F1112A80000D2B0E1 /* JoinLeagueViewController.m */,
+				5E4C729E1112BD2200D2B0E1 /* LeagueDetailsViewController.h */,
+				5E4C729F1112BD2200D2B0E1 /* LeagueDetailsViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -510,6 +539,9 @@
 				5E99022C110946FB007E11E8 /* stage_background.png in Resources */,
 				5E99023711094C1A007E11E8 /* bg_login.png in Resources */,
 				5E990443110C37D0007E11E8 /* bg_uitextfield.png in Resources */,
+				5E4C722D1112A7DA00D2B0E1 /* CreateLeagueViewController.xib in Resources */,
+				5E4C72321112A80000D2B0E1 /* JoinLeagueViewController.xib in Resources */,
+				5E4C72A21112BD2200D2B0E1 /* LeagueDetailsViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -564,6 +596,10 @@
 				5E9901CE1104FDBF007E11E8 /* AddLeagueViewController.m in Sources */,
 				5E990450110C3B82007E11E8 /* PDTextField.m in Sources */,
 				5E990553110D8246007E11E8 /* PDButton.m in Sources */,
+				5E4C722C1112A7DA00D2B0E1 /* CreateLeagueViewController.m in Sources */,
+				5E4C72311112A80000D2B0E1 /* JoinLeagueViewController.m in Sources */,
+				5E4C72A11112BD2200D2B0E1 /* LeagueDetailsViewController.m in Sources */,
+				5E4C735A111438BF00D2B0E1 /* Utils.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

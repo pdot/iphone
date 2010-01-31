@@ -20,11 +20,8 @@
 	[ObjectiveResourceConfig setSite:@"http://localhost:2999/"];
 	
 	// dogs is password protected
-	[ObjectiveResourceConfig setUser:@"jason"];
+	[ObjectiveResourceConfig setUser:@"jason2"];
 	[ObjectiveResourceConfig setPassword:@"jasonw"];
-	
-	// use json
-	// [ObjectiveResourceConfig setResponseType:JSONResponse];
 	
 	// use xml
 	[ObjectiveResourceConfig setResponseType:XmlResponse];

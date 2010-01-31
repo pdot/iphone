@@ -11,6 +11,15 @@
 	return @"leagues";
 }
 
+
+// returns YES iff league was successfully joined
++(BOOL) join:(NSString*)passcode {
+	//TODO: this is hackish fix it	
+	NSError *error = nil;
+	[League findRemote:[NSString stringWithFormat:@"join/%@", passcode, nil] withResponse:&error];
+	return error == nil;
+}
+
 - (void) dealloc
 {
 	[createdAt release];

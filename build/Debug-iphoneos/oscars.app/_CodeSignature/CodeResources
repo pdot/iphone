@@ -6,19 +6,31 @@
 	<dict>
 		<key>AddLeagueViewController.nib</key>
 		<data>
-		CHrtbTyelU2SmVM5tYy4Dixvy9g=
+		5Zn/+jjnKtZ+deIAvN0VpRMqPIU=
 		</data>
 		<key>AwardsViewController.nib</key>
 		<data>
 		/eoZOi63V6nmezSLSaphyEJissQ=
 		</data>
+		<key>CreateLeagueViewController.nib</key>
+		<data>
+		rE76RSDmSv/mTfz2C6mbWdM5k6M=
+		</data>
+		<key>JoinLeagueViewController.nib</key>
+		<data>
+		RJPOag1G0ImT6/ZUhvs74TEgRKQ=
+		</data>
+		<key>LeagueDetailsViewController.nib</key>
+		<data>
+		BSIjBnLpTY5P4TaeKxjPMEvHAdc=
+		</data>
 		<key>LeaguesViewController.nib</key>
 		<data>
-		1aY+qb/8g/E2z7bhSV7CaWJ56Ys=
+		AduMAiXzegL+SScEd6AxE5MeC28=
 		</data>
 		<key>LoginViewController.nib</key>
 		<data>
-		amLmNMhSA0/tIU5Z6rkf4gTrF9Q=
+		a+VAUwiRhVPs2teMuiTLa5mzmbI=
 		</data>
 		<key>MainWindow.nib</key>
 		<data>
@@ -34,11 +46,15 @@
 		</data>
 		<key>RegistrationViewController.nib</key>
 		<data>
-		rGgeMm8VWiyvdYlNRSzjaqgz75E=
+		5pDBETe6g3hKx5uCi1F02ZMeE3o=
 		</data>
 		<key>bg_login.png</key>
 		<data>
 		XknMxcmH7KftEvCJBg4VgkZ7SdE=
+		</data>
+		<key>bg_uitextfield.png</key>
+		<data>
+		tUz4EgVuS1h6rz2Rd9n6BTxyNhE=
 		</data>
 		<key>embedded.mobileprovision</key>
 		<data>

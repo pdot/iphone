@@ -16,4 +16,6 @@
 @property (nonatomic , retain) NSDate   *createdAt;
 @property (nonatomic , retain) NSDate   *updatedAt;
 
++(BOOL) join:(NSString*)passcode;
+
 @end
