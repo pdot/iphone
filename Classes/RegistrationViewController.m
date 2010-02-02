@@ -47,14 +47,11 @@
 		[user createRemoteWithResponse:&error];
 		if (error == nil) {
 			// successful
-			UIAlertView *alert = [[[UIAlertView alloc] initWithTitle:@"Registration Successful" message:@"Please check your email to activate your account." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil] autorelease];
-			[alert show];
+			[[[[UIAlertView alloc] initWithTitle:@"Registration Successful" message:@"Please check your email to activate your account." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil] autorelease] show];
 			[self.navigationController popViewControllerAnimated:YES];
 		} else {
 			// other error
-			NSLog(@"ERROR: %@", error);
-			UIAlertView *alert = [[[UIAlertView alloc] initWithTitle:@"" message:@"TODO: Handle this error" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil] autorelease];
-			[alert show];
+			[[[[UIAlertView alloc] initWithTitle:@"" message:@"TODO: Handle this error" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil] autorelease] show];
 		} 
 	}
 }
@@ -172,13 +169,13 @@
 
 
 - (void)viewDidUnload {
-	scrollView = nil;
-	txtFirstName = nil;
-	txtLastName = nil;
-	txtLogin = nil;
-	txtEmail = nil;
-	txtPassword = nil;
-	txtPasswordConfirmation = nil;
+	self.scrollView = nil;
+	self.txtFirstName = nil;
+	self.txtLastName = nil;
+	self.txtLogin = nil;
+	self.txtEmail = nil;
+	self.txtPassword = nil;
+	self.txtPasswordConfirmation = nil;
 }
 
 - (void)dealloc {

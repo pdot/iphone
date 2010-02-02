@@ -19,9 +19,8 @@
 	if (error == nil) 
 	{
 		[[[[UIAlertView alloc] initWithTitle:@"Success" message:[NSString stringWithFormat:@"Your pool was successfully created. Your invitation code is %@", league.passcode] delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil] autorelease] show];
-		[self.navigationController popViewControllerAnimated:YES];
-		//[self.navigationController popToViewController:self.parentViewController animated:YES]; TODO: get this working
-		
+		NSArray *viewControllers = [[self navigationController] viewControllers];
+		[[self navigationController] popToViewController:[viewControllers objectAtIndex:1] animated:YES];	
 	}
 	else
 	{
@@ -34,7 +33,7 @@
 }
 
 - (void) viewDidUnload {
-	txtName = nil;
+	self.txtName = nil;
 }
 
 @end

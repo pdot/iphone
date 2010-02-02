@@ -1,9 +1,12 @@
 #import <UIKit/UIKit.h>
+#import "PDNavBar.h"
 
 @interface AddLeagueViewController : UIViewController {
+	PDNavBar	*navBar;
 }
 
--(IBAction) cancelButtonWasPressed;
+@property (nonatomic, retain) PDNavBar	*navBar;
+
 -(IBAction) createButtonWasPressed;
 -(IBAction) joinButtonWasPressed;
 

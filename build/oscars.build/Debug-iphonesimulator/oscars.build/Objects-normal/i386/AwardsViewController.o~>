@@ -1,0 +1,2 @@
+/Users/TelferMac/Projects/iphone/iphone/Classes/AwardsViewController.m: In function '-[AwardsViewController tableView:cellForRowAtIndexPath:]':
+/Users/TelferMac/Projects/iphone/iphone/Classes/AwardsViewController.m:64: warning: 'setText:' is deprecated (declared at /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.2.sdk/System/Library/Frameworks/UIKit.framework/Headers/UITableViewCell.h:200)

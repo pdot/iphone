@@ -20,6 +20,17 @@
 		5E4C72A11112BD2200D2B0E1 /* LeagueDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E4C729F1112BD2200D2B0E1 /* LeagueDetailsViewController.m */; };
 		5E4C72A21112BD2200D2B0E1 /* LeagueDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E4C72A01112BD2200D2B0E1 /* LeagueDetailsViewController.xib */; };
 		5E4C735A111438BF00D2B0E1 /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E4C7359111438BF00D2B0E1 /* Utils.m */; };
+		5E4C742B11154D9600D2B0E1 /* PDNavBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E4C742A11154D9600D2B0E1 /* PDNavBar.m */; };
+		5E4C745D111556F600D2B0E1 /* icon_groups.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E4C745A111556F600D2B0E1 /* icon_groups.png */; };
+		5E4C745E111556F600D2B0E1 /* icon_picks.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E4C745B111556F600D2B0E1 /* icon_picks.png */; };
+		5E4C745F111556F600D2B0E1 /* icon_settings.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E4C745C111556F600D2B0E1 /* icon_settings.png */; };
+		5E4C747D11155D8900D2B0E1 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E4C747B11155D8900D2B0E1 /* SettingsViewController.m */; };
+		5E4C747E11155D8900D2B0E1 /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E4C747C11155D8900D2B0E1 /* SettingsViewController.xib */; };
+		5E4C74B01115667400D2B0E1 /* NavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E4C74AF1115667400D2B0E1 /* NavigationViewController.m */; };
+		5E96DDB91116B86D001F1CE7 /* StandingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E96DDB71116B86D001F1CE7 /* StandingsViewController.m */; };
+		5E96DDBA1116B86D001F1CE7 /* StandingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E96DDB81116B86D001F1CE7 /* StandingsViewController.xib */; };
+		5E96DDD31116C08D001F1CE7 /* bg_floor.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E96DDD11116C08D001F1CE7 /* bg_floor.png */; };
+		5E96DDD41116C08D001F1CE7 /* bg_curtain.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E96DDD21116C08D001F1CE7 /* bg_curtain.png */; };
 		5E9900181103CB4A007E11E8 /* RegistrationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E9900161103CB4A007E11E8 /* RegistrationViewController.m */; };
 		5E9900191103CB4A007E11E8 /* RegistrationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E9900171103CB4A007E11E8 /* RegistrationViewController.xib */; };
 		5E9900361103E86C007E11E8 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E9900351103E86C007E11E8 /* User.m */; };
@@ -94,6 +105,21 @@
 		5E4C72A01112BD2200D2B0E1 /* LeagueDetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = LeagueDetailsViewController.xib; path = Classes/LeagueDetailsViewController.xib; sourceTree = "<group>"; };
 		5E4C7358111438BF00D2B0E1 /* Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
 		5E4C7359111438BF00D2B0E1 /* Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utils.m; sourceTree = "<group>"; };
+		5E4C742911154D9600D2B0E1 /* PDNavBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDNavBar.h; sourceTree = "<group>"; };
+		5E4C742A11154D9600D2B0E1 /* PDNavBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDNavBar.m; sourceTree = "<group>"; };
+		5E4C745A111556F600D2B0E1 /* icon_groups.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_groups.png; sourceTree = "<group>"; };
+		5E4C745B111556F600D2B0E1 /* icon_picks.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_picks.png; sourceTree = "<group>"; };
+		5E4C745C111556F600D2B0E1 /* icon_settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_settings.png; sourceTree = "<group>"; };
+		5E4C747A11155D8900D2B0E1 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
+		5E4C747B11155D8900D2B0E1 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
+		5E4C747C11155D8900D2B0E1 /* SettingsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = SettingsViewController.xib; path = Classes/SettingsViewController.xib; sourceTree = "<group>"; };
+		5E4C74AE1115667400D2B0E1 /* NavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationViewController.h; sourceTree = "<group>"; };
+		5E4C74AF1115667400D2B0E1 /* NavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationViewController.m; sourceTree = "<group>"; };
+		5E96DDB61116B86D001F1CE7 /* StandingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StandingsViewController.h; sourceTree = "<group>"; };
+		5E96DDB71116B86D001F1CE7 /* StandingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StandingsViewController.m; sourceTree = "<group>"; };
+		5E96DDB81116B86D001F1CE7 /* StandingsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = StandingsViewController.xib; path = Classes/StandingsViewController.xib; sourceTree = "<group>"; };
+		5E96DDD11116C08D001F1CE7 /* bg_floor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg_floor.png; sourceTree = "<group>"; };
+		5E96DDD21116C08D001F1CE7 /* bg_curtain.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg_curtain.png; sourceTree = "<group>"; };
 		5E9900151103CB4A007E11E8 /* RegistrationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegistrationViewController.h; sourceTree = "<group>"; };
 		5E9900161103CB4A007E11E8 /* RegistrationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegistrationViewController.m; sourceTree = "<group>"; };
 		5E9900171103CB4A007E11E8 /* RegistrationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = RegistrationViewController.xib; path = Classes/RegistrationViewController.xib; sourceTree = "<group>"; };
@@ -280,6 +306,8 @@
 		5E99022A110946C6007E11E8 /* NIBs */ = {
 			isa = PBXGroup;
 			children = (
+				5E96DDB81116B86D001F1CE7 /* StandingsViewController.xib */,
+				5E4C747C11155D8900D2B0E1 /* SettingsViewController.xib */,
 				5E4C72A01112BD2200D2B0E1 /* LeagueDetailsViewController.xib */,
 				5E4C72301112A80000D2B0E1 /* JoinLeagueViewController.xib */,
 				5E4C722B1112A7DA00D2B0E1 /* CreateLeagueViewController.xib */,
@@ -297,6 +325,11 @@
 		5E99022D11094701007E11E8 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				5E96DDD11116C08D001F1CE7 /* bg_floor.png */,
+				5E96DDD21116C08D001F1CE7 /* bg_curtain.png */,
+				5E4C745A111556F600D2B0E1 /* icon_groups.png */,
+				5E4C745B111556F600D2B0E1 /* icon_picks.png */,
+				5E4C745C111556F600D2B0E1 /* icon_settings.png */,
 				5E990442110C37D0007E11E8 /* bg_uitextfield.png */,
 				5E99023611094C1A007E11E8 /* bg_login.png */,
 				5E99022B110946FB007E11E8 /* stage_background.png */,
@@ -311,6 +344,10 @@
 				5E99044F110C3B82007E11E8 /* PDTextField.m */,
 				5E990551110D8246007E11E8 /* PDButton.h */,
 				5E990552110D8246007E11E8 /* PDButton.m */,
+				5E4C742911154D9600D2B0E1 /* PDNavBar.h */,
+				5E4C742A11154D9600D2B0E1 /* PDNavBar.m */,
+				5E4C74AE1115667400D2B0E1 /* NavigationViewController.h */,
+				5E4C74AF1115667400D2B0E1 /* NavigationViewController.m */,
 			);
 			name = "Custom Controls";
 			sourceTree = "<group>";
@@ -450,12 +487,6 @@
 		5E99FBE61102C322007E11E8 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				5E4C72291112A7DA00D2B0E1 /* CreateLeagueViewController.h */,
-				5E4C722A1112A7DA00D2B0E1 /* CreateLeagueViewController.m */,
-				5E99FBAA11018937007E11E8 /* AwardsViewController.h */,
-				5E99FBAB11018937007E11E8 /* AwardsViewController.m */,
-				5E99FBE01102C2B8007E11E8 /* NomineesViewController.h */,
-				5E99FBDE1102C2B8007E11E8 /* NomineesViewController.m */,
 				5E99FDE31102E99F007E11E8 /* LoginViewController.h */,
 				5E99FDE41102E99F007E11E8 /* LoginViewController.m */,
 				5E9900151103CB4A007E11E8 /* RegistrationViewController.h */,
@@ -464,10 +495,20 @@
 				5E99011A1104303F007E11E8 /* LeaguesViewController.m */,
 				5E9901CB1104FDBF007E11E8 /* AddLeagueViewController.h */,
 				5E9901CC1104FDBF007E11E8 /* AddLeagueViewController.m */,
+				5E4C72291112A7DA00D2B0E1 /* CreateLeagueViewController.h */,
+				5E4C722A1112A7DA00D2B0E1 /* CreateLeagueViewController.m */,
 				5E4C722E1112A80000D2B0E1 /* JoinLeagueViewController.h */,
 				5E4C722F1112A80000D2B0E1 /* JoinLeagueViewController.m */,
 				5E4C729E1112BD2200D2B0E1 /* LeagueDetailsViewController.h */,
 				5E4C729F1112BD2200D2B0E1 /* LeagueDetailsViewController.m */,
+				5E99FBAA11018937007E11E8 /* AwardsViewController.h */,
+				5E99FBAB11018937007E11E8 /* AwardsViewController.m */,
+				5E99FBE01102C2B8007E11E8 /* NomineesViewController.h */,
+				5E99FBDE1102C2B8007E11E8 /* NomineesViewController.m */,
+				5E4C747A11155D8900D2B0E1 /* SettingsViewController.h */,
+				5E4C747B11155D8900D2B0E1 /* SettingsViewController.m */,
+				5E96DDB61116B86D001F1CE7 /* StandingsViewController.h */,
+				5E96DDB71116B86D001F1CE7 /* StandingsViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -542,6 +583,13 @@
 				5E4C722D1112A7DA00D2B0E1 /* CreateLeagueViewController.xib in Resources */,
 				5E4C72321112A80000D2B0E1 /* JoinLeagueViewController.xib in Resources */,
 				5E4C72A21112BD2200D2B0E1 /* LeagueDetailsViewController.xib in Resources */,
+				5E4C745D111556F600D2B0E1 /* icon_groups.png in Resources */,
+				5E4C745E111556F600D2B0E1 /* icon_picks.png in Resources */,
+				5E4C745F111556F600D2B0E1 /* icon_settings.png in Resources */,
+				5E4C747E11155D8900D2B0E1 /* SettingsViewController.xib in Resources */,
+				5E96DDBA1116B86D001F1CE7 /* StandingsViewController.xib in Resources */,
+				5E96DDD31116C08D001F1CE7 /* bg_floor.png in Resources */,
+				5E96DDD41116C08D001F1CE7 /* bg_curtain.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -600,6 +648,10 @@
 				5E4C72311112A80000D2B0E1 /* JoinLeagueViewController.m in Sources */,
 				5E4C72A11112BD2200D2B0E1 /* LeagueDetailsViewController.m in Sources */,
 				5E4C735A111438BF00D2B0E1 /* Utils.m in Sources */,
+				5E4C742B11154D9600D2B0E1 /* PDNavBar.m in Sources */,
+				5E4C747D11155D8900D2B0E1 /* SettingsViewController.m in Sources */,
+				5E4C74B01115667400D2B0E1 /* NavigationViewController.m in Sources */,
+				5E96DDB91116B86D001F1CE7 /* StandingsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -13,8 +13,8 @@
 	BOOL success = [League join:txtPasscode.text];
 	if (success) 
 	{
-		// TODO: pop twice
-		[self.navigationController popViewControllerAnimated:YES];
+		NSArray *viewControllers = [[self navigationController] viewControllers];
+		[[self navigationController] popToViewController:[viewControllers objectAtIndex:1] animated:YES];	
 	}
 	else
 	{
@@ -38,7 +38,7 @@
 }
 
 - (void) viewDidUnload {
-	txtPasscode = nil;
+	self.txtPasscode = nil;
 }
 
 

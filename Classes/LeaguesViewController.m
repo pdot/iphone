@@ -4,12 +4,23 @@
 #import "AddLeagueViewController.h"
 #import "PDTextField.h"
 #import "LeagueDetailsViewController.h"
-
-
+#import "NavigationViewController.h"
 
 @implementation LeaguesViewController
 
-@synthesize leagues, btnAdd, btnPool1, btnPool2, btnPool3, btnPool4;
+@synthesize leagues, navBar, btnAdd, btnPool1, btnPool2, btnPool3, btnPool4;
+
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
+    if (self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil]) {
+		self.navBar = [[[PDNavBar alloc] initWithFrame:CGRectMake(0, 400, 320, 460)] autorelease];
+		[self.view addSubview:navBar];
+    }
+    return self;
+}
+
+- (void)viewDidLoad {
+	[super viewDidLoad];
+}
 
 - (void)viewWillAppear:(BOOL)animated {
 	[self loadLeagues];
@@ -75,12 +86,13 @@
 }
 
 - (void)viewDidUnload {
-	leagues = nil;
-	btnAdd = nil;
-	btnPool1 = nil;
-	btnPool2 = nil;
-	btnPool3 = nil;
-	btnPool4 = nil;
+	self.navBar = nil;
+	self.leagues = nil;
+	self.btnAdd = nil;
+	self.btnPool1 = nil;
+	self.btnPool2 = nil;
+	self.btnPool3 = nil;
+	self.btnPool4 = nil;
 }
 
 - (void)dealloc {

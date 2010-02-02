@@ -8,17 +8,20 @@
 
 #import <UIKit/UIKit.h>
 #import "League.h"
+#import "PDNavBar.h"
 
 @interface LeagueDetailsViewController : UIViewController {
 	League	*league;
 	IBOutlet UILabel	*lblPoolName;
+	PDNavBar	*navBar;
 }
 
+@property (nonatomic, retain) PDNavBar	*navBar;
 @property (nonatomic, retain) League	*league;
 @property (nonatomic, retain) UILabel	*lblPoolName;
 
 - (id)initWithLeague:(League*) l;
-- (IBAction) cancelButtonWasPressed;
+- (IBAction) standingsButtonWasPressed;
 - (IBAction) inviteButtonWasPressed;
 - (IBAction) leavePoolButtonWasPressed;
 

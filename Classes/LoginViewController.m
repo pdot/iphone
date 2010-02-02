@@ -10,6 +10,7 @@
 #import "ObjectiveResource.h"
 #import "AwardsViewController.h"
 #import "RegistrationViewController.h"
+#import "NavigationViewController.h"
 #import "LeaguesViewController.h"
 #import "Award.h"
 
@@ -17,21 +18,12 @@
 
 @synthesize btnLogin, btnRegister, txtLogin, txtPassword, scrollView;
 
- // The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
-    if (self = [super initWithNibName:@"LoginViewController" bundle:nibBundleOrNil]) {
-        // Custom initialization
-		self.title = @"Login";
-    }
-    return self;
-}
-
  // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
 	[super viewDidLoad];
 	
 	// TODO: remove this
-	LeaguesViewController *vc = [[[LeaguesViewController alloc] initWithNibName:@"LeaguesViewController" bundle:nil] autorelease];
+	NavigationViewController *vc = [[[NavigationViewController alloc] init] autorelease];
 //	RegistrationViewController *vc = [[[RegistrationViewController alloc] initWithNibName:@"RegistrationViewController" bundle:nil] autorelease];
 	[self.navigationController pushViewController:vc animated:YES];
 	
@@ -143,22 +135,11 @@
 }
 
 - (void)viewDidUnload {
-	// Release any retained subviews of the main view.
-	// e.g. self.myOutlet = nil;
-	btnLogin = nil;
-	btnRegister = nil;
-	txtLogin = nil;
-	txtPassword = nil;
-	scrollView = nil;
-}
-
-- (void)dealloc {
-	[btnLogin release];
-	[btnRegister release];
-	[txtLogin release];
-	[txtPassword release];
-	[scrollView release];
-    [super dealloc];
+	self.btnLogin = nil;
+	self.btnRegister = nil;
+	self.txtLogin = nil;
+	self.txtPassword = nil;
+	self.scrollView = nil;
 }
 
 

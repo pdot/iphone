@@ -7,15 +7,18 @@
 //
 
 #import "LeagueDetailsViewController.h"
+#import "StandingsViewController.h"
 
 
 @implementation LeagueDetailsViewController
 
-@synthesize league, lblPoolName;
+@synthesize league, lblPoolName, navBar;
 
 - (id)initWithLeague:(League*) l {
     if (self = [super initWithNibName:@"LeagueDetailsViewController" bundle:nil]) {
 		self.league = l;
+		self.navBar = [[[PDNavBar alloc] initWithFrame:CGRectMake(0, 400, 320, 460)] autorelease];
+		[self.view addSubview:navBar];
     }
     return self;
 }
@@ -25,8 +28,9 @@
 	[[UIApplication sharedApplication] openURL: [NSURL URLWithString: url]];
 }
 
--(IBAction) cancelButtonWasPressed {
-	[self.navigationController popViewControllerAnimated:YES];
+-(IBAction) standingsButtonWasPressed {
+	StandingsViewController *vc = [[[StandingsViewController alloc] initWithNibName:@"StandingsViewController" bundle:nil] autorelease];
+	[[self navigationController] pushViewController:vc animated:YES];
 }
 
 -(IBAction) leavePoolButtonWasPressed {
@@ -62,6 +66,7 @@
 - (void)viewDidUnload {
 	self.lblPoolName = nil;
 	self.league = nil;
+	self.navBar = nil;
 }
 
 
