@@ -19,31 +19,31 @@
 
 @synthesize nominees, tableView, category;
 
-//- (void) addNomineeButtonClicked {
-//	Nominee	 *newNominee = [[[Nominee alloc] init] autorelease];
-//	newNominee.personId = owner.personId;
-//	addController.newNominee = newNominee;
-//	[self.navigationController pushViewController:addController animated:YES];
-//}
+- (id)initWithAward:(Award*) a {
+    if (self = [super initWithNibName:@"NomineesViewController" bundle:nil]) {
+		self.category = a;
+    }
+    return self;
+}
+
+- (void)viewDidLoad {
+	self.editing = YES;
+	[tableView setEditing:YES animated:NO];
+}
 
 - (void) loadNominees {
 	self.nominees = [category findAllNominees];
 	[tableView reloadData];
 }
 
-#pragma mark UIViewController methods
-
-- (void)viewDidLoad {
-	self.title = category.name;
-//	self.addController = [[[AddNomineeViewController alloc] initWithNibName:@"AddNomineeView" bundle:nil] autorelease];
-//	self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addNomineeButtonClicked)]; 
-}
-
 - (void)viewWillAppear:(BOOL)animated {
+	[self.navigationController setNavigationBarHidden:NO animated:NO];
 	[self loadNominees];
 }
 
-#pragma mark UITableViewDataSource methods
+- (void)viewWillDisappear:(BOOL)animated {
+		[self.navigationController setNavigationBarHidden:YES animated:NO];
+}
 
 - (NSInteger)tableView:(UITableView *)table numberOfRowsInSection:(NSInteger)section {
 	return [nominees count];
@@ -56,29 +56,24 @@
 		cell = [[[UITableViewCell alloc] initWithFrame:CGRectZero] autorelease];
 	}
 	cell.text = ((Nominee *)[nominees objectAtIndex:indexPath.row]).name;
+	cell.showsReorderControl = YES; 
 	return cell;
 }
 
-//- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-//  
-//  ViewNomineeController * aViewNomineeController = [[ViewNomineeController alloc] initWithStyle:UITableViewStyleGrouped];
-//  aViewNomineeController.nominee = [nominees objectAtIndex:indexPath.row];
-//  [self.navigationController pushViewController:aViewNomineeController animated:YES];
-//  [aViewNomineeController release];
-//  
-//}
+- (UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+	return UITableViewCellEditingStyleNone;
+}
 
-//- (void)tableView:(UITableView *)aTableView  commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath { 
-//	[tableView beginUpdates]; 
-//	if (editingStyle == UITableViewCellEditingStyleDelete) { 
-//		[tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:YES]; 
-//
-//		// Deletes the object on the resource , if the deletion is successfull YES is returned
-//		[(Nominee *)[nominees objectAtIndex:indexPath.row] destroyRemote];
-//		[nominees removeObjectAtIndex:indexPath.row];
-//	} 
-//	[tableView endUpdates];   
-//}
+// Determine whether a given row is eligible for reordering or not.
+- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
+    return YES;
+}
+// Process the row move. This means updating the data model to correct the item indices.
+- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath 
+	  toIndexPath:(NSIndexPath *)toIndexPath {
+	
+}
 
 #pragma mark cleanup
 - (void)dealloc {

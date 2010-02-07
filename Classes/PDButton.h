@@ -7,10 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import "Award.h"
 
 @interface PDButton : UIButton {
-
+	Award *award;		// HACK for awards view controller 
 }
+
+@property (nonatomic, retain) Award *award;
 
 @end

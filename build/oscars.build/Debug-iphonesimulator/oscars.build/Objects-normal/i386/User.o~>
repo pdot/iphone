@@ -1,0 +1,5 @@
+/Users/TelferMac/Projects/iphone/iphone/Classes/User.m:6: error: no declaration of property 'score' found in the interface
+/Users/TelferMac/Projects/iphone/iphone/Classes/User.m: In function '-[User dealloc]':
+/Users/TelferMac/Projects/iphone/iphone/Classes/User.m:14: error: 'score' undeclared (first use in this function)
+/Users/TelferMac/Projects/iphone/iphone/Classes/User.m:14: error: (Each undeclared identifier is reported only once
+/Users/TelferMac/Projects/iphone/iphone/Classes/User.m:14: error: for each function it appears in.)

@@ -3,7 +3,7 @@
 
 @implementation User
 
-@synthesize login, email, password, password_confirmation;
+@synthesize login, email, password, password_confirmation, score;
 
 - (void) dealloc
 {
@@ -11,6 +11,7 @@
 	[email release];
 	[password release];
 	[password_confirmation release];
+	[score release];
 	[super dealloc];
 }
 

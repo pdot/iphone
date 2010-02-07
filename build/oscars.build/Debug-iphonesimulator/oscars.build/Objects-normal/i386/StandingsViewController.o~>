@@ -1,0 +1,9 @@
+/Users/TelferMac/Projects/iphone/iphone/Classes/StandingsViewController.m:6: error: no declaration of property 'navBar' found in the interface
+/Users/TelferMac/Projects/iphone/iphone/Classes/StandingsViewController.m: In function '-[StandingsViewController initWithLeague:]':
+/Users/TelferMac/Projects/iphone/iphone/Classes/StandingsViewController.m:10: error: request for member 'navBar' in something not a structure or union
+/Users/TelferMac/Projects/iphone/iphone/Classes/StandingsViewController.m:10: error: 'PDNavBar' undeclared (first use in this function)
+/Users/TelferMac/Projects/iphone/iphone/Classes/StandingsViewController.m:10: error: (Each undeclared identifier is reported only once
+/Users/TelferMac/Projects/iphone/iphone/Classes/StandingsViewController.m:10: error: for each function it appears in.)
+/Users/TelferMac/Projects/iphone/iphone/Classes/StandingsViewController.m:11: error: 'navBar' undeclared (first use in this function)
+/Users/TelferMac/Projects/iphone/iphone/Classes/StandingsViewController.m: In function '-[StandingsViewController viewDidUnload]':
+/Users/TelferMac/Projects/iphone/iphone/Classes/StandingsViewController.m:151: error: request for member 'navBar' in something not a structure or union

@@ -1,0 +1,4 @@
+In file included from /Users/TelferMac/Projects/iphone/iphone/Classes/Standing.m:1:
+/Users/TelferMac/Projects/iphone/iphone/Classes/Standing.h:5: error: duplicate member 'score'
+/Users/TelferMac/Projects/iphone/iphone/Classes/Standing.m:15: warning: property 'score' requires method '-score' to be defined - use @synthesize, @dynamic or provide a method implementation
+/Users/TelferMac/Projects/iphone/iphone/Classes/Standing.m:15: warning: property 'score' requires the method 'setScore:' to be defined - use @synthesize, @dynamic or provide a method implementation

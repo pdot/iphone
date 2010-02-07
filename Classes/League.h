@@ -18,4 +18,6 @@
 
 +(BOOL) join:(NSString*)passcode;
 
+-(NSArray *) findAllStandingsWithResponse:(NSError **)aError;
+
 @end

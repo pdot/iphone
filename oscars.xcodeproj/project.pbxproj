@@ -82,6 +82,7 @@
 		5E99FDD61102E7E0007E11E8 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E99FDD51102E7E0007E11E8 /* LoginViewController.xib */; };
 		5E99FDE51102E99F007E11E8 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E99FDE41102E99F007E11E8 /* LoginViewController.m */; };
 		5E99FE851102FA6C007E11E8 /* AwardsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E99FE841102FA6C007E11E8 /* AwardsViewController.xib */; };
+		5EFA08EB111BE3D1005F8DFA /* Standing.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EFA08EA111BE3D1005F8DFA /* Standing.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -222,6 +223,8 @@
 		5E99FDE31102E99F007E11E8 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		5E99FDE41102E99F007E11E8 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		5E99FE841102FA6C007E11E8 /* AwardsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AwardsViewController.xib; sourceTree = "<group>"; };
+		5EFA08E9111BE3D1005F8DFA /* Standing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Standing.h; sourceTree = "<group>"; };
+		5EFA08EA111BE3D1005F8DFA /* Standing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Standing.m; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* oscars-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "oscars-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -524,6 +527,8 @@
 				5E99FBE11102C2B8007E11E8 /* Nominee.m */,
 				5E99012611043184007E11E8 /* League.h */,
 				5E99012711043184007E11E8 /* League.m */,
+				5EFA08E9111BE3D1005F8DFA /* Standing.h */,
+				5EFA08EA111BE3D1005F8DFA /* Standing.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -652,6 +657,7 @@
 				5E4C747D11155D8900D2B0E1 /* SettingsViewController.m in Sources */,
 				5E4C74B01115667400D2B0E1 /* NavigationViewController.m in Sources */,
 				5E96DDB91116B86D001F1CE7 /* StandingsViewController.m in Sources */,
+				5EFA08EB111BE3D1005F8DFA /* Standing.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

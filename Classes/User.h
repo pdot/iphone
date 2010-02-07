@@ -5,11 +5,13 @@
 	NSString *email;
 	NSString *password;
 	NSString *password_confirmation;
+	NSString *score;
 }
 
 @property (nonatomic, retain) NSString *login;
 @property (nonatomic, retain) NSString *email;
 @property (nonatomic, retain) NSString *password;
 @property (nonatomic, retain) NSString *password_confirmation;
+@property (nonatomic, retain) NSString *score;
 
 @end

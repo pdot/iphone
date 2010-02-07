@@ -10,7 +10,6 @@
 
 @interface Nominee : NSObject {
 	NSString *nomineeId;
-	//NSString *awardId;
 	NSString *name;
 	NSString *description;
 	NSString *movie_name;
@@ -21,7 +20,6 @@
 }
 
 @property (nonatomic , retain) NSString *nomineeId;
-//@property (nonatomic , retain) NSString *awardId;
 @property (nonatomic , retain) NSString *name;
 @property (nonatomic , retain) NSString *description;
 @property (nonatomic , retain) NSString *movie_name;

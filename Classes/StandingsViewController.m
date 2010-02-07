@@ -1,17 +1,20 @@
-//
-//  StandingsViewController.m
-//  oscars
-//
-//  Created by Jason Whyne on 31/01/10.
-//  Copyright 2010 __MyCompanyName__. All rights reserved.
-//
-
 #import "StandingsViewController.h"
-
+#import "Standing.h"
 
 @implementation StandingsViewController
 
-@synthesize tableView, scrollView;
+@synthesize tableView, scrollView, standings, league, navBar;
+
+- (id)initWithLeague:(League*) l {
+    if (self = [super initWithNibName:@"StandingsViewController" bundle:nil]) {
+		self.navBar = [[[PDNavBar alloc] initWithFrame:CGRectMake(0, 400, 320, 460)] autorelease];
+		[self.view addSubview:navBar];
+		self.league = l;
+		[self loadStandings];
+    }
+    return self;
+}
+
 
 - (void)viewDidLoad {
 	tableView.separatorColor = [UIColor grayColor];
@@ -21,114 +24,95 @@
     [super viewDidLoad];
 }
 
+- (void) loadStandings
+{
+	NSError *error = nil;
+	self.standings = [league findAllStandingsWithResponse:&error];
+	[tableView reloadData];
+}
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-	return 20;
+	return [standings count] + 1;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)aTableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-	const NSInteger TOP_LABEL_TAG = 1001;
-	const NSInteger BOTTOM_LABEL_TAG = 1002;
-	UILabel *topLabel;
-	UILabel *bottomLabel;
+	const NSInteger RANK_LABEL_TAG = 1001;
+	const NSInteger NAME_LABEL_TAG = 1002;
+	const NSInteger SCORE_LABEL_TAG = 1003;
+	
+	UILabel *lblRank;
+	UILabel *lblName;
+	UILabel *lblScore;
 	
 	static NSString *CellIdentifier = @"Cell";
 	UITableViewCell *cell = [aTableView dequeueReusableCellWithIdentifier:CellIdentifier];
 	//cell.clipsToBounds = YES;
+	
 
 	if (cell == nil)
 	{
 		//
 		// Create the cell.
 		//
-		cell =
-		[[[UITableViewCell alloc]
-		  initWithFrame:CGRectZero
-		  reuseIdentifier:CellIdentifier]
-		 autorelease];
-		
-		UIImage *indicatorImage = [UIImage imageNamed:@"indicator.png"];
-		cell.accessoryView =
-		[[[UIImageView alloc]
-		  initWithImage:indicatorImage]
-		 autorelease];
-		
-		UIImage *image = [UIImage imageNamed:@"imageA.png"];
-		
+		cell = [[[UITableViewCell alloc] initWithFrame:CGRectZero reuseIdentifier:CellIdentifier] autorelease];
+			
 		const CGFloat LABEL_HEIGHT = 20;
+
+		// Rank Label
+		lblRank = [[[UILabel alloc] initWithFrame:CGRectMake(10.0, 0.0, 50.0, LABEL_HEIGHT)] autorelease];
+		lblRank.tag = RANK_LABEL_TAG;
+		lblRank.backgroundColor = [UIColor clearColor];
+		lblRank.textColor = [UIColor colorWithRed:0.5 green:0.5 blue:0.5 alpha:1.0];
+		lblRank.highlightedTextColor = [UIColor colorWithRed:1.0 green:1.0 blue:0.9 alpha:1.0];
+		lblRank.font = [UIFont systemFontOfSize:[UIFont labelFontSize]];
+		[cell.contentView addSubview:lblRank];
 		
-		//
-		// Create the label for the top row of text
-		//
-		topLabel =
-		[[[UILabel alloc]
-		  initWithFrame:
-		  CGRectMake(
-					 image.size.width + 2.0 * cell.indentationWidth,
-					 0.0,//5 * (aTableView.rowHeight - 2 * LABEL_HEIGHT),
-					 aTableView.bounds.size.width -
-					 image.size.width - 4.0 * cell.indentationWidth
-					 - indicatorImage.size.width,
-					 LABEL_HEIGHT)]
-		 autorelease];
-		[cell.contentView addSubview:topLabel];
+		// Name label
+		lblName = [[[UILabel alloc] initWithFrame: CGRectMake(45.0, 0.0, 200.0, LABEL_HEIGHT)] autorelease];		
+		lblName.tag = NAME_LABEL_TAG;
+		lblName.backgroundColor = [UIColor clearColor];
+		lblName.textColor = [UIColor grayColor];
+		lblName.highlightedTextColor = [UIColor colorWithRed:1.0 green:1.0 blue:0.9 alpha:1.0];
+		lblName.font = [UIFont systemFontOfSize:[UIFont labelFontSize] - 2];
+		[cell.contentView addSubview:lblName];
 		
-		//
-		// Configure the properties for the text that are the same on every row
-		//
-		topLabel.tag = TOP_LABEL_TAG;
-		topLabel.backgroundColor = [UIColor clearColor];
-		topLabel.textColor = [UIColor colorWithRed:0.5 green:0.5 blue:0.5 alpha:1.0];
-		topLabel.highlightedTextColor = [UIColor colorWithRed:1.0 green:1.0 blue:0.9 alpha:1.0];
-		topLabel.font = [UIFont systemFontOfSize:[UIFont labelFontSize]];
+		//Score label
+		lblScore = [[[UILabel alloc] initWithFrame: CGRectMake(230.0, 0.0, 40.0, LABEL_HEIGHT)] autorelease];		
+		lblScore.tag = SCORE_LABEL_TAG;
+		lblScore.backgroundColor = [UIColor clearColor];
+		lblScore.textColor = [UIColor grayColor];
+		lblScore.textAlignment = UITextAlignmentRight;
+		lblScore.highlightedTextColor = [UIColor colorWithRed:1.0 green:1.0 blue:0.9 alpha:1.0];
+		lblScore.font = [UIFont systemFontOfSize:[UIFont labelFontSize] - 2];
+		[cell.contentView addSubview:lblScore];
 		
-		//
-		// Create the label for the top row of text
-		//
-//		bottomLabel =
-//		[[[UILabel alloc]
-//		  initWithFrame:
-//		  CGRectMake(
-//					 image.size.width + 2.0 * cell.indentationWidth,
-//					 0.5 * (aTableView.rowHeight - 2 * LABEL_HEIGHT) + LABEL_HEIGHT,
-//					 aTableView.bounds.size.width -
-//					 image.size.width - 4.0 * cell.indentationWidth
-//					 - indicatorImage.size.width,
-//					 LABEL_HEIGHT)]
-//		 autorelease];
-//		[cell.contentView addSubview:bottomLabel];
-//		
-//		//
-//		// Configure the properties for the text that are the same on every row
-//		//
-//		bottomLabel.tag = BOTTOM_LABEL_TAG;
-//		bottomLabel.backgroundColor = [UIColor clearColor];
-//		bottomLabel.textColor = [UIColor whiteColor];
-//		bottomLabel.highlightedTextColor = [UIColor colorWithRed:1.0 green:1.0 blue:0.9 alpha:1.0];
-//		bottomLabel.font = [UIFont systemFontOfSize:[UIFont labelFontSize] - 2];
-		
-		//
-		// Create a background image view.
-		//
 		cell.backgroundView = [[[UIImageView alloc] init] autorelease];
 		cell.selectedBackgroundView = [[[UIImageView alloc] init] autorelease];
+		
 	}
 	else
 	{
-		topLabel = (UILabel *)[cell viewWithTag:TOP_LABEL_TAG];
-		//bottomLabel = (UILabel *)[cell viewWithTag:BOTTOM_LABEL_TAG];
+		lblRank = (UILabel *)[cell viewWithTag:RANK_LABEL_TAG];
+		lblName = (UILabel *)[cell viewWithTag:NAME_LABEL_TAG];
+		lblScore = (UILabel *)[cell viewWithTag:SCORE_LABEL_TAG];
 	}
 	
-	topLabel.text = [NSString stringWithFormat:@"%ld.\tJohn Smith %ld\t\t%ld", [indexPath row], [indexPath row], [indexPath row]*5];
-	//bottomLabel.text = [NSString stringWithFormat:@"Some other information.", [indexPath row]];
+	if([indexPath row] == 0)
+	{
+		lblRank.text = @"#";
+		lblName.text = @"Name";
+		lblScore.text = @"Score";
+	}
+	else
+	{
+		Standing *standing = (Standing *)[standings objectAtIndex:([indexPath row] - 1)];
+		lblRank.text = [NSString stringWithFormat:@"%ld.", [indexPath row]];
+		lblName.text = [NSString stringWithFormat:@"%@", standing.login];
+		lblScore.text = [NSString stringWithFormat:@"%@", standing.score];
+	}
 	
-	//
-	// Set the background and selected background images for the text.
-	// Since we will round the corners at the top and bottom of sections, we
-	// need to conditionally choose the images based on the row index and the
-	// number of rows in the section.
-	//
 //	UIImage *rowBackground;
 //	UIImage *selectionBackground;
 //	NSInteger sectionRows = [aTableView numberOfRowsInSection:[indexPath section]];
@@ -155,12 +139,16 @@
 //	}
 	((UIImageView *)cell.backgroundView).image = [UIImage imageNamed:@"bg_uitextfield.png"];
 	((UIImageView *)cell.selectedBackgroundView).image = [UIImage imageNamed:@"bg_uitextfield.png"];
+
 	
 	return cell;
 }
 
 - (void)viewDidUnload {
 	self.tableView = nil;
+	self.standings = nil;
+	self.league = nil;
+	self.navBar = nil;
 	[super viewDidUnload];
 }
 

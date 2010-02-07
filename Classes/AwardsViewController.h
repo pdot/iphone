@@ -1,14 +1,16 @@
 #import <UIKit/UIKit.h>
+#import "PDNavBar.h"
 
-@interface AwardsViewController : UIViewController <UITableViewDelegate, UITableViewDataSource> {
+@interface AwardsViewController : UIViewController {
 	NSMutableArray *awards;
-	IBOutlet UITableView *tableView;
-	// IBOutlet UIBarButtonItem * addButton;
+	PDNavBar			*navBar;
+	IBOutlet UIScrollView *scrollView;
 }
 
-@property (nonatomic , retain) NSArray* awards;
-//-(IBAction) refreshButtonWasPressed;
-//-(IBAction) addButtonWasPressed;
-@property(nonatomic , retain) UITableView *tableView;
+@property (nonatomic, retain) NSArray* awards;
+@property (nonatomic, retain) PDNavBar *navBar;
+@property (nonatomic, retain) UIScrollView *scrollView;
+
+-(IBAction) poolButtonWasPressed:(UIButton*) sender;
 
 @end

@@ -29,7 +29,7 @@
 }
 
 -(IBAction) standingsButtonWasPressed {
-	StandingsViewController *vc = [[[StandingsViewController alloc] initWithNibName:@"StandingsViewController" bundle:nil] autorelease];
+	StandingsViewController *vc = [[[StandingsViewController alloc] initWithLeague:self.league] autorelease];
 	[[self navigationController] pushViewController:vc animated:YES];
 }
 

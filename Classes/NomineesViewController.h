@@ -21,4 +21,6 @@
 @property(nonatomic , retain) NSArray *nominees;
 @property(nonatomic , retain) UITableView *tableView;
 
+- (id)initWithAward:(Award*) a;
+
 @end

@@ -6,7 +6,7 @@
 	<dict>
 		<key>AddLeagueViewController.nib</key>
 		<data>
-		5Zn/+jjnKtZ+deIAvN0VpRMqPIU=
+		DjufRosf2d6duJxzyrlv87GO6FM=
 		</data>
 		<key>AwardsViewController.nib</key>
 		<data>
@@ -14,19 +14,19 @@
 		</data>
 		<key>CreateLeagueViewController.nib</key>
 		<data>
-		rE76RSDmSv/mTfz2C6mbWdM5k6M=
+		CibIp+mbRaYXFhezSDK3yEWTy5Q=
 		</data>
 		<key>JoinLeagueViewController.nib</key>
 		<data>
-		RJPOag1G0ImT6/ZUhvs74TEgRKQ=
+		I36Q7/Nh18eQkQAkFjHBwq85WSg=
 		</data>
 		<key>LeagueDetailsViewController.nib</key>
 		<data>
-		BSIjBnLpTY5P4TaeKxjPMEvHAdc=
+		YXF+oKDac66CKdyLj1urwhLanPY=
 		</data>
 		<key>LeaguesViewController.nib</key>
 		<data>
-		AduMAiXzegL+SScEd6AxE5MeC28=
+		mTTT4LmbcGqTYZDwe+8kzrdmRiU=
 		</data>
 		<key>LoginViewController.nib</key>
 		<data>
@@ -48,6 +48,22 @@
 		<data>
 		5pDBETe6g3hKx5uCi1F02ZMeE3o=
 		</data>
+		<key>SettingsViewController.nib</key>
+		<data>
+		wgQqv38eM2YmqUT1Vs4veXua2uY=
+		</data>
+		<key>StandingsViewController.nib</key>
+		<data>
+		fnk9+NWdTpZYEMKPJE5PuCkXSnQ=
+		</data>
+		<key>bg_curtain.png</key>
+		<data>
+		rYTrfAKvRf+SY9+uK4QmHAnS20I=
+		</data>
+		<key>bg_floor.png</key>
+		<data>
+		qK5yWldSQ5clYyvwuvy+sB7J6W4=
+		</data>
 		<key>bg_login.png</key>
 		<data>
 		XknMxcmH7KftEvCJBg4VgkZ7SdE=
@@ -59,6 +75,18 @@
 		<key>embedded.mobileprovision</key>
 		<data>
 		JZtfGReEYlqwynKYbpWT9AzRamE=
+		</data>
+		<key>icon_groups.png</key>
+		<data>
+		qcobhqkiwFJLZMBPhZwp/S9T9BI=
+		</data>
+		<key>icon_picks.png</key>
+		<data>
+		npxJZrPDITeRk6FFsHRWDeETkmE=
+		</data>
+		<key>icon_settings.png</key>
+		<data>
+		rJ4lIh8kTDlR7zbyN1SPPrjRcs8=
 		</data>
 		<key>stage_background.png</key>
 		<data>

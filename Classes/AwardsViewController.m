@@ -1,6 +1,8 @@
 #import "AwardsViewController.h"
 #import "Award.h"
 #import "NomineesViewController.h"
+#import "NavigationViewController.h"
+#import "PDButton.h"
 
 @interface AwardsViewController (Private)
 
@@ -10,85 +12,55 @@
 
 
 @implementation AwardsViewController
-@synthesize awards , tableView;
+@synthesize awards , scrollView, navBar;
 
 // The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     if (self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil]) {
-        // Custom initialization
-		self.title = @"Categories";
+		// add bottom navigation bar 
+		self.navBar = [[[PDNavBar alloc] initWithFrame:CGRectMake(0, 400, 320, 460)] autorelease];
+		[self.view addSubview:navBar];
+		
+		[self loadAwards];
+		// add buttons for each award category
+		for (int i = 0; i < [awards count]; i++)
+		{
+			Award *award = (Award*)[awards objectAtIndex:i];
+			PDButton* button = [[[PDButton alloc] initWithFrame:CGRectMake(20.0, (40.0 * i) + 70.0, 280.0, 31.0)] autorelease];
+			[button setTitle:award.name forState:UIControlStateNormal];
+			[button setContentHorizontalAlignment:UIControlContentHorizontalAlignmentLeft];
+			button.contentEdgeInsets = UIEdgeInsetsMake(0.0, 10.0, 0.0, 0.0);
+			button.titleLabel.font = [UIFont fontWithName:@"Helvetica-Bold" size:15.0];
+			button.award = award;
+			[button addTarget:self action:@selector(buttonWasPressed:) forControlEvents:UIControlEventTouchUpInside];
+
+			[scrollView addSubview:button];
+		}
+		
+		[scrollView setContentSize:CGSizeMake(320, (40.0 * [awards count]) + 110.0)];
     }
     return self;
 }
 
-- (void)viewWillAppear:(BOOL)animated {
-	[self loadAwards];
+-(IBAction) buttonWasPressed:(PDButton*) sender  {
+		NomineesViewController *nvc = [[[NomineesViewController alloc] initWithAward:sender.award] autorelease];
+		[self.navigationController pushViewController:nvc animated:YES];		
 }
 
 - (void) loadAwards {
 	self.awards = [Award findAllRemote];
-	[tableView reloadData];
 }
 
-//-(IBAction) refreshButtonWasPressed {
-//	[self loadAwards];
-//}
-
-//-(IBAction) addButtonWasPressed {
-//	AddAwardViewController *aController = [[[AddAwardViewController alloc ] initWithNibName:@"AddAwardView" bundle:nil ] autorelease];
-//	aController.Award = [[Award alloc] init];
-//	aController.delegate = self;
-//	[self.navigationController pushViewController:aController animated:YES];
-//}
-
-
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 1;
+- (void) viewDidUnload
+{
+	self.awards = nil;
+	self.navBar = nil;
+	self.scrollView = nil;
 }
-
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [awards count];
-}
-
-
-- (UITableViewCell *)tableView:(UITableView *)aTableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    
-    static NSString *CellIdentifier = @"Cell";
-    
-    UITableViewCell *cell = [aTableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    if (cell == nil) {
-        cell = [[[UITableViewCell alloc] initWithFrame:CGRectZero reuseIdentifier:CellIdentifier] autorelease];
-		cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-    }
-    cell.text = ((Award *)[awards objectAtIndex:indexPath.row]).name;
-    return cell;
-}
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-	NomineesViewController *nvc = [[[NomineesViewController alloc] initWithNibName:@"NomineesViewController" bundle:nil] autorelease];
-	nvc.category = (Award *)[awards objectAtIndex:indexPath.row];
-	[self.navigationController pushViewController:nvc animated:YES];		
-}
-
-//- (void)tableView:(UITableView *)aTableView  commitEditingStyle:(UITableViewCellEditingStyle)editingStyle 
-//forRowAtIndexPath:(NSIndexPath *)indexPath { 
-//  [aTableView beginUpdates]; 
-//  if (editingStyle == UITableViewCellEditingStyleDelete) { 
-//		
-//    [aTableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:YES]; 
-//		
-//    // Deletes the object on the resource
-//    [(Award *)[Awards objectAtIndex:indexPath.row] destroyRemote];
-//    [Awards removeObjectAtIndex:indexPath.row];
-//  } 
-//  [aTableView endUpdates];   
-//}
-
 
 - (void)dealloc {
 	[awards release];
-	[tableView release];
+	[scrollView release];
 	[super dealloc];
 }
 
